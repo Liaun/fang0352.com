@@ -1,0 +1,677 @@
+<!DOCTYPE html html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">  
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>大同房产网-二手房</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/liaun.css" rel="stylesheet">
+
+<script src="http://lib.sinaapp.com/js/jquery/1.9.1/jquery-1.9.1.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script>
+$(function () {
+  $('[data-toggle="popover"]').popover()
+})	
+</script>
+  </head>
+  <body>
+    <nav role="navigation" id="header" class="navbar navbar-inverse navbar-fixed-top">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" data-toggle="collapse" data-target="#navigation" class="navbar-toggle collapsed">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a href="index.html" class="navbar-brand logo"><img src="img/logo.png" id="logo"></a>
+    </div>
+    <div id="navigation" class="collapse navbar-collapse" >
+      <ul class="nav navbar-nav">
+        
+            <li ><a href="index.html" target="_black">首页</a> </li>
+            <li ><a href="newhomelist.html" target="_black">新房</a> </li>
+            <li > <a href="oldhomelist.html" target="_black">二手房</a> </li>
+            <li ><a href="rentinglist.html" target="_black">租房</a></li>
+   
+            <li class="dropdown">
+              <a href="newhomelist.html" target="_black" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">独家房源<span class="caret"></span></a>
+              <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+                  <li><a href="newhomelist.html" target="_black">特价楼盘</a></li>
+                  <li><a href="oldhomelist.html" target="_black">托管房源</a></li>
+              </ul>
+            </li>
+      </ul>
+      
+       <form class="navbar-form navbar-left" role="search">
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="小区/学校/开发商">
+        </div>
+        <button type="submit" class="btn btn-default">找房</button>
+       </form>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="addhome.html" target="_blank">发布信息</a></li>
+        <li><a href="#denglu"  data-toggle="modal" data-target="#denglu">登陆</a></li>
+        <li><a href="#zhuce"  data-toggle="modal" data-target="#zhuce">注册</a> </li>
+      </ul>
+    </div>
+  </div>
+</nav> <!-----header  end---->
+
+
+<div id="denglu" class="modal fade" role="dialog" aria-labelledby="gridSystemModalLabel" >
+  <div class="modal-dialog" role="document" id="log">
+    <div class="modal-content" >
+      <div class="modal-header">
+      <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true"> &times;</span></button>
+      <p class="modal-title" id="gridSystemModalLabel"><b>用户登陆</b><span class="pull-right" >还没有账号 <a href="#zhuce"  data-toggle="modal" data-target="#zhuce" data-dismiss="modal">立即注册</span></a></p>
+      </div>
+      <div class="modal-body">
+         <div class="input-group">
+         <span class="input-group-addon glyphicon glyphicon-user" id="sizing-addon1"></span>
+         <input type="text" class="form-control" placeholder="请输入手机号或者邮箱" aria-describedby="sizing-addon1">
+         </div>
+         <div class="input-group">
+         <span class="input-group-addon  glyphicon glyphicon-lock" id="sizing-addon1"></span>
+         <input type="password" class="form-control" placeholder="请输入密码" aria-describedby="sizing-addon1">
+         </div>
+      </div>
+      <a class="pull-right" href="#"><p>忘记密码</p></a>
+      <div class="text-center">
+        <button type="button" class="btn btn-success">立即登陆</button>
+      </div>
+
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->     
+  
+    
+     <!---登陆框---->
+     
+     
+     
+           <div id="zhuce" class="modal fade" role="dialog" aria-labelledby="gridSystemModalLabel" >
+  <div class="modal-dialog" role="document" id="log">
+    <div class="modal-content" >
+      <div class="modal-header">
+      <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true"> &times;</span></button>
+      <p class="modal-title" id="gridSystemModalLabel"><b>用户注册</b><span class="pull-right" >已有账号<a href="#denglu" data-toggle="modal" data-target="#denglu"  data-dismiss="modal">立即登陆</span></a></p>
+      </div>
+      <div class="modal-body">
+         <div class="input-group">
+         <span class="input-group-addon glyphicon glyphicon-user" id="sizing-addon1"></span>
+         <input type="text" class="form-control" placeholder="请输入手机号或者邮箱" aria-describedby="sizing-addon1">
+         </div>
+         <div class="input-group">
+         <span class="input-group-addon glyphicon glyphicon-ok" id="sizing-addon1"></span>
+         <input type="text" class="form-control" placeholder="请输入验证码" aria-describedby="sizing-addon1">
+         <span class="input-group-addon" id="sizing-addon1">获取验证码</span>
+         </div>
+         <div class="input-group">
+         <span class="input-group-addon  glyphicon glyphicon-lock" id="sizing-addon1"></span>
+         <input type="password" class="form-control" placeholder="请输入密码" aria-describedby="sizing-addon1">
+         </div>
+         <div class="input-group">
+         <span class="input-group-addon  glyphicon glyphicon-lock" id="sizing-addon1"></span>
+         <input type="password" class="form-control" placeholder="请再次输入密码" aria-describedby="sizing-addon1">
+         </div>
+      </div>
+      <a class="pull-right" href="#"><p>忘记密码</p></a>
+      <div class="text-center">
+        <button type="button" class="btn btn-success">立即注册</button>
+      </div>
+
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->     
+  
+    
+     <!---注册框---->
+
+
+ 
+ 
+<div class="jumbotron" id="banner">
+<div class="container">
+   <img src="css/img/site.png">
+
+<!--  <h2 class="text-center"><b>大同房产网 fang0352.com</b></h2>-->
+   <!-- <div><a  class="btn  btn-default btn-lg pull-right" href="#" role="button"><span style="opacity:1;">地图找房</span></a></div>-->
+   <div>
+<button type="button" class="btn btn-default pull-right" data-container="body" data-toggle="popover" data-placement="left" data-content="程序猿发烧了，过几天就可以地图找房了.">
+地图找房
+</button> </div>
+</div>
+</div>  
+ <!-----bannner--end---->
+ 
+ 
+ 
+ 
+ <div id="main">
+ 
+ <div style="font-size:15px">
+
+   <div class="container">
+		 <div class="breadcrumbs">
+
+                            <a href="index.html">大同房产网</a>
+                            <span class="stp">&nbsp;&gt;&nbsp;</span> <a href="#">二手房</a>
+
+    </div>
+       <dl>
+         <dd data-index="0">
+           <div id="newc">
+            <b>区域：</b>
+                <a href="#" class="on">不限</a>
+                <a href="/ershoufang/#/">城区</a>
+                <a href="/ershoufang/#/">矿区</a>
+                <a href="/ershoufang/#/">御东</a>
+                <a href="/ershoufang/#/">南郊区</a>
+                <a href="/ershoufang/#/">新荣区</a>
+                <a href="/ershoufang/shijingshan/">左云县</a>
+                <a href="/ershoufang/tongzhou/">阳高县</a>
+                <a href="/ershoufang/tongzhou/">广灵县</a>
+                <a href="/ershoufang/tongzhou/">灵丘县</a>
+                <a href="/ershoufang/tongzhou/">大同县</a>
+                <a href="/ershoufang/tongzhou/">天镇县</a>
+                <a href="/ershoufang/tongzhou/">浑源县</a>
+            </div>
+            </dd>
+         </dl>
+         
+         <dl class="dl-lst clear" mod-id="filter-box-d">
+         <dd data-index="0">
+           <div id="newc">
+            <b>价格：</b>
+                <a href="#" class="on">不限</a>
+                <a href="#">20万以下</a>
+                <a href="#">20万-25万</a>
+                <a href="#">25万-30万</a>
+                <a href="#">30万-35万</a>
+                <a href="#">35万-40万</a>
+                <a href="#">40万-45万</a>
+                 <a href="#">45万-50万</a>
+                  <a href="#">50万以上</a>
+              
+            </div>
+            </dd>
+         </dl>
+         <dl class="dl-lst clear" mod-id="filter-box-d">
+         <dd data-index="0">
+           <div id="newc">
+            <b>房型：</b>
+                <a href="#" class="on">不限</a>
+                <a href="/ershoufang/#/">一室</a>
+                <a href="/ershoufang/#/">二室</a>
+                <a href="/ershoufang/#/">三室</a>
+                <a href="/ershoufang/#/">四室</a>
+                <a href="/ershoufang/#/">五室</a>
+                <a href="/ershoufang/shijingshan/">五室以上</a>
+            </div>
+            </dd>
+         </dl>
+         <dl class="dl-lst clear" mod-id="filter-box-d">
+         <dd data-index="0">
+           <div id="newc">
+            <b>面积：</b>
+                <a href="#" class="on">不限</a>
+                <a href="/ershoufang/#/">50平以下</a>
+                <a href="/ershoufang/#/">50-60平</a>
+                <a href="/ershoufang/#/">60-70平</a>
+                <a href="/ershoufang/#/">70-80平</a>
+                <a href="/ershoufang/#/">80-90平</a>
+                <a href="/ershoufang/#/">90-100平</a>
+                <a href="/ershoufang/#/">100-110平</a>
+                <a href="/ershoufang/#/">110-120平</a>
+                <a href="/ershoufang/#/">120-130平</a>
+                <a href="/ershoufang/#/">130平以上</a>
+            </div>
+            </dd>
+         </dl>
+           <dl class="dl-lst clear" mod-id="filter-box-d">
+         <dd data-index="0">
+           <div id="newc">
+             <b>筛选：</b>
+                <span>
+                      朝向：
+                     <select class="input-xlarge controls">
+                      <option>不限</option>
+                      <option>主卧朝南</option>
+                      <option>次卧朝北</option>
+                      <option>书房朝南</option>
+                      <option>客厅朝南</option>
+                    </select>
+                 </span>
+                 <span>
+                      楼龄：
+                     <select class="input-xlarge controls">
+                      <option>不限</option>
+                      <option>5年以内</option>
+                      <option>10年以内</option>
+                      <option>10年-20年</option>
+                      <option>20年以上</option>
+                    </select>
+                 </span>
+                  <span>
+                      楼层：
+                     <select class="input-xlarge controls">
+                      <option>不限</option>
+                      <option>低层</option>
+                      <option>中层</option>
+                      <option>高层</option>
+                    </select>
+                 </span>
+                 <span>
+                  <input type="checkbox" value="Option one">
+                  优质学区
+
+                 </span>
+                 <span>
+                  <input type="checkbox" value="Option one">
+                  独家房源
+
+                 </span>
+                  <span>
+                  <input type="checkbox" value="Option one">
+                  有钥匙
+
+                 </span>
+                  <span>
+                  <input type="checkbox" value="Option one">
+                  降价
+
+                 </span>
+                 <span>
+                 <button type="button" class="btn btn-success btn-sm">确认</button>
+                 </span>
+            </div>
+            
+            </dd>
+         </dl>
+    
+</div>
+</div> 
+
+<div id="oldlist">  
+  <div class="container">
+
+<a href="oldconn.html">
+<div class="thumbnail">
+<div class="pull-right">
+<input type="button" id="make" class="btn btn-danger btn-sm " value="修改"/>
+<input type="button" id="delbtn" class="btn btn-danger btn-sm " value="删除"/>
+</div>
+  <div class="row">
+    <div class="col-md-3">
+      <img src="img/old/oldhomeid/ershou1.jpg" alt="东信广场两室一厅82.5m²">    
+    </div>
+    <div class="col-md-6">
+      <h3>东信广场两室一厅82.5m²</h3>
+      <p id="oldl"><b><span>东信广场</span>  <span>2室一厅</span>  <span> 82.5平米</span>  <span>南北朝向<span></b></p>
+       <div>
+         <span class="label label-info">独家房源</span>
+         <span class="label label-success">有钥匙</span>
+       </div>
+     </div>
+   <div class="col-md-3 text-center jjia">
+     <h3>售价<span><b>35</b></span>万</h3>
+     <p>132人看过此房</p>
+
+   </div>
+
+  
+</div>
+
+</div>
+</a>
+
+<a href="oldconn.html">
+<div class="thumbnail">
+  <div class="row">
+    <div class="col-md-3">
+      <img src="img/old/oldhomeid/ershou2.jpg" alt="东信广场两室一厅82.5m²">    
+    </div>
+    <div class="col-md-6">
+      <h3>东信广场两室一厅82.5m²</h3>
+      <p id="oldl"><b><span>东信广场</span>  <span>2室一厅</span>  <span> 82.5平米</span>  <span>南北朝向<span></b></p>
+       <div>
+         <span class="label label-info">独家房源</span>
+         <span class="label label-success">有钥匙</span>
+         <span class="label label-danger">降价</span>
+         
+       </div>
+     </div>
+   <div class="col-md-3 text-center jjia">
+     <h3>售价<span><b>33</b></span>万</h3>
+     <p>33人看过此房</p>
+   </div>
+   <hr>
+  
+</div>
+</div>
+</a>
+
+
+<a href="oldconn.html">
+<div class="thumbnail">
+  <div class="row">
+    <div class="col-md-3">
+      <img src="img/old/oldhomeid/ershou3.jpg" alt="惠民西城两室一厅64.4m²">    
+    </div>
+    <div class="col-md-6">
+      <h3>惠民西城两室一厅64.4m²</h3>
+      <p id="oldl"><b><span>惠民西城</span>  <span>2室一厅</span>  <span> 64.4平米</span>  <span>南北朝向<span></b></p>
+       <div>
+         <span class="label label-info">独家房源</span>
+         <span class="label label-success">有钥匙</span>
+          <span class="label label-primary">户型方正</span>
+       </div>
+     </div>
+   <div class="col-md-3 text-center jjia">
+     <h3>售价<span><b>30</b></span>万</h3>
+     <p>52人看过此房</p>
+   </div>
+   <hr>
+  
+</div>
+</div>
+</a>
+
+
+<a href="oldconn.html">
+<div class="thumbnail">
+  <div class="row">
+    <div class="col-md-3">
+      <img src="img/old/oldhomeid/ershou4.jpg" alt="东信广场两室一厅82.5m²">    
+    </div>
+    <div class="col-md-6">
+      <h3>柳港园C区两室两厅72m²</h3>
+      <p id="oldl"><b><span>柳港园C区</span>  <span>2室2厅</span>  <span> 72平米</span>  <span>南北朝向<span></b></p>
+       <div>
+          <span class="label label-info">独家房源</span>
+         <span class="label label-success">有钥匙</span>
+          <span class="label label-primary">公摊小</span>
+           <span class="label label-warning">一中学区</span>
+       </div>
+     </div>
+   <div class="col-md-3 text-center jjia">
+     <h3>售价<span><b>28</b></span>万</h3>
+     <p>88人看过此房</p>
+   </div>
+   <hr>
+  
+</div>
+</div>
+</a>
+
+<a href="oldconn.html">
+<div class="thumbnail">
+  <div class="row">
+    <div class="col-md-3">
+      <img src="img/old/oldhomeid/ershou5.jpg" alt="东信广场两室一厅82.5m²">    
+    </div>
+    <div class="col-md-6">
+      <h3>柳港园B区三室二厅132m²</h3>
+      <p id="oldl"><b><span>柳港园B区</span>  <span>3室2厅</span>  <span> 132平米</span>  <span>南北朝向<span></b></p>
+       <div>
+         <span class="label label-success">有钥匙</span>
+          <span class="label label-primary">公摊小</span>
+           <span class="label label-warning">一中学区</span>
+       </div>
+     </div>
+   <div class="col-md-3 text-center jjia">
+     <h3>售价<span><b>74</b></span>万</h3>
+     <p>36人看过此房</p>
+   </div>
+   <hr>
+  
+</div>
+</div>
+</a>
+
+
+<a href="oldconn.html">
+<div class="thumbnail">
+  <div class="row">
+    <div class="col-md-3">
+      <img src="img/old/oldhomeid/ershou1.jpg" alt="东信广场两室一厅82.5m²">    
+    </div>
+    <div class="col-md-6">
+      <h3>东信广场两室一厅82.5m²</h3>
+      <p id="oldl"><b><span>东信广场</span>  <span>2室一厅</span>  <span> 82.5平米</span>  <span>南北朝向<span></b></p>
+       <div>
+         <span class="label label-info">独家房源</span>
+         <span class="label label-success">有钥匙</span>
+       </div>
+     </div>
+   <div class="col-md-3 text-center jjia">
+     <h3>售价<span><b>35</b></span>万</h3>
+     <p>132人看过此房</p>
+   </div>
+   <hr>
+  
+</div>
+</div>
+</a>
+
+<a href="oldconn.html">
+<div class="thumbnail">
+  <div class="row">
+    <div class="col-md-3">
+      <img src="img/old/oldhomeid/ershou2.jpg" alt="东信广场两室一厅82.5m²">    
+    </div>
+    <div class="col-md-6">
+      <h3>东信广场两室一厅82.5m²</h3>
+      <p id="oldl"><b><span>东信广场</span>  <span>2室一厅</span>  <span> 82.5平米</span>  <span>南北朝向<span></b></p>
+       <div>
+         <span class="label label-info">独家房源</span>
+         <span class="label label-success">有钥匙</span>
+         <span class="label label-danger">降价</span>
+         
+       </div>
+     </div>
+   <div class="col-md-3 text-center jjia">
+     <h3>售价<span><b>33</b></span>万</h3>
+     <p>33人看过此房</p>
+   </div>
+   <hr>
+  
+</div>
+</div>
+</a>
+
+
+<a href="oldconn.html">
+<div class="thumbnail">
+  <div class="row">
+    <div class="col-md-3">
+      <img src="img/old/oldhomeid/ershou3.jpg" alt="惠民西城两室一厅64.4m²">    
+    </div>
+    <div class="col-md-6">
+      <h3>惠民西城两室一厅64.4m²</h3>
+      <p id="oldl"><b><span>惠民西城</span>  <span>2室一厅</span>  <span> 64.4平米</span>  <span>南北朝向<span></b></p>
+       <div>
+         <span class="label label-info">独家房源</span>
+         <span class="label label-success">有钥匙</span>
+          <span class="label label-primary">户型方正</span>
+       </div>
+     </div>
+   <div class="col-md-3 text-center jjia">
+     <h3>售价<span><b>30</b></span>万</h3>
+     <p>52人看过此房</p>
+   </div>
+   <hr>
+  
+</div>
+</div>
+</a>
+
+
+<a href="oldconn.html">
+<div class="thumbnail">
+  <div class="row">
+    <div class="col-md-3">
+      <img src="img/old/oldhomeid/ershou4.jpg" alt="东信广场两室一厅82.5m²">    
+    </div>
+    <div class="col-md-6">
+      <h3>柳港园C区两室两厅72m²</h3>
+      <p id="oldl"><b><span>柳港园C区</span>  <span>2室2厅</span>  <span> 72平米</span>  <span>南北朝向<span></b></p>
+       <div>
+          <span class="label label-info">独家房源</span>
+         <span class="label label-success">有钥匙</span>
+          <span class="label label-primary">公摊小</span>
+           <span class="label label-warning">一中学区</span>
+       </div>
+     </div>
+   <div class="col-md-3 text-center jjia">
+     <h3>售价<span><b>28</b></span>万</h3>
+     <p>88人看过此房</p>
+   </div>
+   <hr>
+  
+</div>
+</div>
+</a>
+
+<a href="oldconn.html">
+<div class="thumbnail">
+  <div class="row">
+    <div class="col-md-3">
+      <img src="img/old/oldhomeid/ershou5.jpg" alt="东信广场两室一厅82.5m²">    
+    </div>
+    <div class="col-md-6">
+      <h3>柳港园B区三室二厅132m²</h3>
+      <p id="oldl"><b><span>柳港园B区</span>  <span>3室2厅</span>  <span> 132平米</span>  <span>南北朝向<span></b></p>
+       <div>
+         <span class="label label-success">有钥匙</span>
+          <span class="label label-primary">公摊小</span>
+           <span class="label label-warning">一中学区</span>
+       </div>
+     </div>
+   <div class="col-md-3 text-center jjia">
+     <h3>售价<span><b>74</b></span>万</h3>
+     <p>36人看过此房</p>
+   </div>
+   <hr>
+  
+</div>
+</div>
+</a>
+
+<nav class="text-center">
+  <ul class="pagination">
+    <li>
+      <a href="#" aria-label="Previous">
+        <span aria-hidden="true">&laquo;</span>
+      </a>
+    </li>
+    <li class="active"><a href="#">1</a></li>
+    <li><a href="#">2</a></li>
+    <li><a href="#">3</a></li>
+    <li><a href="#">4</a></li>
+    <li><a href="#">5</a></li>
+    <li><a href="#">6</a></li>
+    <li><a href="#">7</a></li>
+    <li><a href="#">8</a></li>
+    <li><a href="#">9</a></li>
+    <li>
+      <a href="#" aria-label="Next">
+        <span aria-hidden="true">&raquo;</span>
+      </a>
+    </li>
+  </ul>
+</nav>
+
+ <div class="row text-center">
+ <div class="page-header">
+  <h1>精选二手房</h1>
+</div>
+
+ <div class="col-sm-6 col-md-3">
+    <div class="thumbnail">
+      <p id="oldp">28万</p>
+      <a href="oldconn.html"><img id="inoldimg" src="img/ershou4.jpg" alt="柳港园C区两室两厅72m²"></a>
+      <div class="caption">
+        <h4>柳港园C区两室两厅72m²</h4>
+      </div>
+    </div>
+  </div>
+   <div class="col-sm-6 col-md-3">
+    <div class="thumbnail">
+      <p id="oldp">74万</p>
+      <a href="oldconn.html"><img id="inoldimg" src="img/ershou5.jpg" alt="柳港园B区三室二厅132m²"></a>
+      <div class="caption">
+        <h4>柳港园B区三室二厅132m²</h4>
+      </div>
+    </div>
+  </div>
+   <div class="col-sm-6 col-md-3">
+    <div class="thumbnail">
+      <p id="oldp">28万</p>
+      <a href="oldconn.html"><img id="inoldimg" src="img/ershou6.jpg" alt="..."></a>
+      <div class="caption">
+        <h4>柳港园C区两室两厅72m²</h4>
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-6 col-md-3">
+    <div class="thumbnail">
+      <p id="oldp">55万</p>
+      <a href="oldconn.html"><img id="inoldimg" src="img/ershou7.jpg" alt="..."></a>
+      <div class="caption">
+        <h4>睿和新城三室两厅128m²</h4>
+      </div>
+    </div>
+  </div>
+  </div>
+ </div>
+
+
+
+</div>
+</div> 
+ 
+ 
+ 
+</div>
+<footer>
+			<div style=" color:#999" class="container">
+				<div class="row">
+                       <!-- <div class="col-xs-12 col-sm-6">
+                                <div class="row">
+                                <ul class="footer-nav">
+                               <a href="#"> <li>关于我们</li></a>
+                               <a href="#"><li>联系我们</li></a>
+                               <a href="#"><li>加入我们</li></a>
+                               <a href="#"> <li>信誉房产</li></a>
+                               <a href="#"><li>常见问题</li></a>
+                               <a href="#"> <li>合作伙伴</li></a>
+                                
+                                </ul>
+                                </div>-->
+                                <div class="cop text-center">
+                             <p>Copyright © 2015 0352fang.com All Rights Reserved | 晋ICP备 13046642号</p>
+                         </div>
+                         </div>
+					
+						<!--<div class="col-xs-12 col-sm-6">
+							<h3 class="pull-right">Contact Us</h3>
+
+
+	
+						</div>-->
+                    
+					
+					</div>
+				</div>
+				
+		
+		</footer>
+
+
+    
+  </body>
+</html>

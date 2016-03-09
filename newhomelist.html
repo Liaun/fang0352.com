@@ -1,0 +1,574 @@
+<!DOCTYPE html html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">  
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>大同房产网-新房</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/liaun.css" rel="stylesheet">
+
+<script src="http://lib.sinaapp.com/js/jquery/1.9.1/jquery-1.9.1.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script>
+$(function () {
+  $('[data-toggle="popover"]').popover()
+})	
+</script>
+  </head>
+  <body>
+    <nav role="navigation" id="header" class="navbar navbar-inverse navbar-fixed-top">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" data-toggle="collapse" data-target="#navigation" class="navbar-toggle collapsed">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a href="index.html" class="navbar-brand logo"><img src="img/logo.png" id="logo"></a>
+    </div>
+    <div id="navigation" class="collapse navbar-collapse" >
+      <ul class="nav navbar-nav">
+        
+            <li ><a href="index.html" target="_black">首页</a> </li>
+            <li ><a href="newhomelist.html" target="_black">新房</a> </li>
+            <li > <a href="oldhomelist.html" target="_black">二手房</a> </li>
+            <li ><a href="rentinglist.html" target="_black">租房</a></li>
+   
+            <li class="dropdown">
+              <a href="newhomelist.html" target="_black" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">独家房源<span class="caret"></span></a>
+              <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+                  <li><a href="newhomelist.html" target="_black">特价楼盘</a></li>
+                  <li><a href="oldhomelist.html" target="_black">托管房源</a></li>
+              </ul>
+            </li>
+      </ul>
+      
+       <form class="navbar-form navbar-left" role="search">
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="小区/学校/开发商">
+        </div>
+        <button type="submit" class="btn btn-default">找房</button>
+       </form>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="addhome.html" target="_blank">发布信息</a></li>
+        <li><a href="#denglu"  data-toggle="modal" data-target="#denglu">登陆</a></li>
+        <li><a href="#zhuce"  data-toggle="modal" data-target="#zhuce">注册</a> </li>
+      </ul>
+    </div>
+  </div>
+</nav> <!-----header  end---->
+
+
+<div id="denglu" class="modal fade" role="dialog" aria-labelledby="gridSystemModalLabel" >
+  <div class="modal-dialog" role="document" id="log">
+    <div class="modal-content" >
+      <div class="modal-header">
+      <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true"> &times;</span></button>
+      <p class="modal-title" id="gridSystemModalLabel"><b>用户登陆</b><span class="pull-right" >还没有账号 <a href="#zhuce"  data-toggle="modal" data-target="#zhuce" data-dismiss="modal">立即注册</span></a></p>
+      </div>
+      <div class="modal-body">
+         <div class="input-group">
+         <span class="input-group-addon glyphicon glyphicon-user" id="sizing-addon1"></span>
+         <input type="text" class="form-control" placeholder="请输入手机号或者邮箱" aria-describedby="sizing-addon1">
+         </div>
+         <div class="input-group">
+         <span class="input-group-addon  glyphicon glyphicon-lock" id="sizing-addon1"></span>
+         <input type="password" class="form-control" placeholder="请输入密码" aria-describedby="sizing-addon1">
+         </div>
+      </div>
+      <a class="pull-right" href="#"><p>忘记密码</p></a>
+      <div class="text-center">
+        <button type="button" class="btn btn-success">立即登陆</button>
+      </div>
+
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->     
+  
+    
+     <!---登陆框---->
+     
+     
+     
+           <div id="zhuce" class="modal fade" role="dialog" aria-labelledby="gridSystemModalLabel" >
+  <div class="modal-dialog" role="document" id="log">
+    <div class="modal-content" >
+      <div class="modal-header">
+      <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true"> &times;</span></button>
+      <p class="modal-title" id="gridSystemModalLabel"><b>用户注册</b><span class="pull-right" >已有账号<a href="#denglu" data-toggle="modal" data-target="#denglu"  data-dismiss="modal">立即登陆</span></a></p>
+      </div>
+      <div class="modal-body">
+         <div class="input-group">
+         <span class="input-group-addon glyphicon glyphicon-user" id="sizing-addon1"></span>
+         <input type="text" class="form-control" placeholder="请输入手机号或者邮箱" aria-describedby="sizing-addon1">
+         </div>
+         <div class="input-group">
+         <span class="input-group-addon glyphicon glyphicon-ok" id="sizing-addon1"></span>
+         <input type="text" class="form-control" placeholder="请输入验证码" aria-describedby="sizing-addon1">
+         <span class="input-group-addon" id="sizing-addon1">获取验证码</span>
+         </div>
+         <div class="input-group">
+         <span class="input-group-addon  glyphicon glyphicon-lock" id="sizing-addon1"></span>
+         <input type="password" class="form-control" placeholder="请输入密码" aria-describedby="sizing-addon1">
+         </div>
+         <div class="input-group">
+         <span class="input-group-addon  glyphicon glyphicon-lock" id="sizing-addon1"></span>
+         <input type="password" class="form-control" placeholder="请再次输入密码" aria-describedby="sizing-addon1">
+         </div>
+      </div>
+      <a class="pull-right" href="#"><p>忘记密码</p></a>
+      <div class="text-center">
+        <button type="button" class="btn btn-success">立即注册</button>
+      </div>
+
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->     
+  
+    
+     <!---注册框---->
+
+
+ 
+ 
+<div class="jumbotron" id="banner">
+<div class="container">
+   <img src="css/img/site.png">
+
+<!--  <h2 class="text-center"><b>大同房产网 fang0352.com</b></h2>-->
+   <!-- <div><a  class="btn  btn-default btn-lg pull-right" href="#" role="button"><span style="opacity:1;">地图找房</span></a></div>-->
+   <div>
+<button type="button" class="btn btn-default pull-right" data-container="body" data-toggle="popover" data-placement="left" data-content="程序猿发烧了，过几天就可以地图找房了.">
+地图找房
+</button> </div>
+</div>
+</div>  
+ <!-----bannner--end---->
+
+ 
+ 
+ <div id="main">
+ 
+ <div style="font-size:15px">
+
+   <div class="container">
+    <div class="breadcrumbs">
+
+                            <a href="index.html">大同房产网</a>
+                            <span class="stp">&nbsp;&gt;&nbsp;</span> <a href="/">新房</a>
+
+    </div>
+   
+   
+
+       <dl>
+         <dd data-index="0">
+           <div id="newc">
+                <span><b>区域：</b></span>
+                <a href="#" class="on">不限</a>
+                <a href="/ershoufang/#/">城区</a>
+                <a href="/ershoufang/#/">矿区</a>
+                <a href="/ershoufang/#/">御东</a>
+                <a href="/ershoufang/#/">南郊区</a>
+                <a href="/ershoufang/#/">新荣区</a>
+                <a href="/ershoufang/shijingshan/">左云县</a>
+                <a href="/ershoufang/tongzhou/">阳高县</a>
+                <a href="/ershoufang/tongzhou/">广灵县</a>
+                <a href="/ershoufang/tongzhou/">灵丘县</a>
+                <a href="/ershoufang/tongzhou/">大同县</a>
+                <a href="/ershoufang/tongzhou/">天镇县</a>
+                <a href="/ershoufang/tongzhou/">浑源县</a>
+            </div>
+            </dd>
+         </dl>
+         
+         <dl class="dl-lst clear" mod-id="filter-box-d">
+         <dd data-index="0">
+           <div id="newc">
+                <span><b>价格：</b></span>
+                <a href="#" class="on">不限</a>
+                <a href="/ershoufang/#/">2000以下</a>
+                <a href="/ershoufang/#/">2000-3000</a>
+                <a href="/ershoufang/#/">3000-4000</a>
+                <a href="/ershoufang/#/">4000-5000</a>
+                <a href="/ershoufang/#/">5000-6000</a>
+                <a href="/ershoufang/shijingshan/">6000以上</a>
+              
+            </div>
+            </dd>
+         </dl>
+         <dl class="dl-lst clear" mod-id="filter-box-d">
+         <dd data-index="0">
+           <div id="newc">
+                <span><b>房型：</b></span>
+                <a href="#" class="on">不限</a>
+                <a href="/ershoufang/#/">一室</a>
+                <a href="/ershoufang/#/">二室</a>
+                <a href="/ershoufang/#/">三室</a>
+                <a href="/ershoufang/#/">四室</a>
+                <a href="/ershoufang/#/">五室</a>
+                <a href="/ershoufang/shijingshan/">五室以上</a>
+            </div>
+            </dd>
+         </dl>
+         <dl class="dl-lst clear" mod-id="filter-box-d">
+         <dd data-index="0">
+           <div id="newc">
+                <span><b>类型：</b></span>
+                <a href="#" class="on">不限</a>
+                <a href="/ershoufang/#/">住宅</a>
+                <a href="/ershoufang/#/">公寓</a>
+                <a href="/ershoufang/#/">别墅</a>
+                <a href="/ershoufang/#/">写字楼</a>
+                <button type="button" class="btn btn-success btn-sm pull-right">确认</button>
+            </div>
+          
+            </dd>
+         </dl>
+    
+</div>
+</div> 
+
+<div id="newlist">  
+  <div class="container">
+
+<a href="newcon.html">
+<div class="thumbnail">
+
+  <div class="row">
+    <div class="col-md-3">
+      <img src="img/new/newhomeid/new1.jpg" alt="伦敦街">    
+    </div>
+    <div class="col-md-6">
+      <h2>伦敦街</h2>
+      <p>城区御东新区南环桥桥头</p>
+      <p>一居/二居</p>
+       <div>
+         <span class="label label-info">二中学区</span>
+         <span class="label label-primary">高档社区</span>
+         <span class="label label-danger">别墅</span>
+       </div>
+     </div>
+   <div class="col-md-3 text-center jjia">
+     <h3>均价<span style="font-size:36px;color:#900"><b>4800</b></span>元/平</h3>
+   </div>
+   <hr>
+
+  
+</div>
+</div>
+</a>
+
+
+<a href="newcon.html">
+<div class="thumbnail">
+  <div class="row">
+
+    <div class="col-md-3">
+      <img src="img/new/newhomeid/new2.jpg" alt="千禧·御东画卷">    
+    </div>
+    <div class="col-md-6">
+      <h2>千禧·御东画卷</h2>
+      <p>御河东路西、永和路东、开源街南</p>
+      <p>一居/二居/三居</p>
+       <div>
+         <span class="label label-success">住宅楼</span>
+         <span class="label label-primary">车位充足</span>
+       </div>
+     </div>
+   <div class="col-md-3 text-center jjia">
+     <h3>均价<span style="font-size:36px;color:#900"><b>4550</b></span>元/平</h3>
+   </div>
+   <hr>
+  
+</div>
+</div>
+</a>
+<a href="newcon.html">
+<div class="thumbnail">
+  <div class="row">
+
+    <div class="col-md-3">
+     <img src="img/new/newhomeid/new3.jpg" alt="西京府">     
+    </div>
+    <div class="col-md-6">
+      <h2>西京府</h2>
+      <p>城区御东西京街</p>
+      <p>一居/二居/三居/四居</p>
+       <div>
+         <span class="label label-success">住宅楼</span>
+         <span class="label label-primary">实验小学学区</span>
+       </div>
+     </div>
+   <div class="col-md-3 text-center jjia">
+     <h3>均价<span style="font-size:36px;color:#900"><b>4150</b></span>元/平</h3>
+   </div>
+   <hr>
+  
+</div>
+</div>
+</a>
+<a href="newcon.html">
+<div class="thumbnail">
+  <div class="row">
+
+    <div class="col-md-3">
+     <img src="img/new/newhomeid/new4.jpg" alt="御昌佳园"> 
+    </div>
+    <div class="col-md-6">
+      <h2>御昌佳园</h2>
+      <p>大同市恒安街北侧（原大同市迎宾大道）</p>
+      <p>一居/二居/三居</p>
+       <div>
+         <span class="label label-success">住宅楼</span>
+         <span class="label  label-danger">现房在售</span>
+       </div>
+     </div>
+   <div class="col-md-3 text-center jjia">
+     <h3>均价<span style="font-size:36px;color:#900"><b>3800</b></span>元/平</h3>
+   </div>
+   <hr>
+  
+</div>
+</div>
+</a>
+<a href="newcon.html">
+<div class="thumbnail">
+  <div class="row">
+
+    <div class="col-md-3">
+      <img src="img/new/newhomeid/new5.jpg" alt="翰林别院"> 
+    </div>
+    <div class="col-md-6">
+      <h2>翰林别院</h2>
+      <p>大同市操场城北街甲8号</p>
+      <p>一居/二居/三居</p>
+       <div>
+         <span class="label label-success">住宅楼</span>
+         <span class="label label-danger">现房在售</span>
+         <span class="label label-primary">四中学区</span>
+       </div>
+     </div>
+   <div class="col-md-3 text-center jjia">
+     <h3>均价<span style="font-size:36px;color:#900"><b>4600</b></span>元/平</h3>
+   </div>
+   <hr>
+  
+</div>
+</div>
+</a>
+<a href="newcon.html">
+<div class="thumbnail">
+  <div class="row">
+
+    <div class="col-md-3">
+     <img src="img/new/newhomeid/new6.jpg" alt="东方名城">    
+    </div>
+    <div class="col-md-6">
+      <h2>东方名城</h2>
+      <p>大同市西京街</p>
+      <p>一居/二居/三居/四居</p>
+       <div>
+         <span class="label label-info">学区房</span>
+         <span class="label label-primary">精装修</span>
+       </div>
+     </div>
+   <div class="col-md-3 text-center jjia">
+     <h3>均价<span style="font-size:36px;color:#900"><b>5800</b></span>元/平</h3>
+   </div>
+   <hr>
+  
+</div>
+</div>
+</a>
+<a href="newcon.html">
+<div class="thumbnail">
+  <div class="row">
+
+    <div class="col-md-3">
+     <img src="img/new/newhomeid/new1.jpg" alt="伦敦街"> 
+    </div>
+     <div class="col-md-6">
+      <h2>伦敦街</h2>
+      <p>城区御东新区南环桥桥头</p>
+      <p>一居/二居</p>
+       <div>
+         <span class="label label-info">二中学区</span>
+         <span class="label label-primary">高档社区</span>
+         <span class="label label-danger">别墅</span>
+       </div>
+     </div>
+   <div class="col-md-3 text-center jjia">
+     <h3>均价<span style="font-size:36px;color:#900"><b>4800</b></span>元/平</h3>
+   </div>
+   <hr>
+  
+</div>
+</div>
+</a>
+<a href="newcon.html">
+<div class="thumbnail">
+  <div class="row">
+
+    <div class="col-md-3">
+      <img src="img/new/newhomeid/new2.jpg" alt="千禧·御东画卷"> 
+    </div>
+    <div class="col-md-6">
+      <h2>千禧·御东画卷</h2>
+      <p>御河东路西、永和路东、开源街南</p>
+      <p>一居/二居/三居</p>
+       <div>
+         <span class="label label-success">住宅楼</span>
+         <span class="label label-primary">车位充足</span>
+       </div>
+     </div>
+   <div class="col-md-3 text-center jjia">
+     <h3>均价<span style="font-size:36px;color:#900"><b>4550</b></span>元/平</h3>
+   </div>
+   <hr>
+  
+</div>
+</div>
+</a>
+<a href="newcon.html">
+<div class="thumbnail">
+  <div class="row">
+
+    <div class="col-md-3">
+     <img src="img/new/newhomeid/new3.jpg" alt="西京府">   
+    </div>
+   <div class="col-md-6">
+      <h2>西京府</h2>
+      <p>城区御东西京街</p>
+      <p>一居/二居/三居/四居</p>
+       <div>
+         <span class="label label-success">住宅楼</span>
+         <span class="label label-primary">实验小学学区</span>
+       </div>
+     </div>
+   <div class="col-md-3 text-center jjia">
+     <h3>均价<span style="font-size:36px;color:#900"><b>4150</b></span>元/平</h3>
+   </div>
+   <hr>
+  
+</div>
+</div>
+</a>
+
+<nav class="text-center">
+  <ul class="pagination">
+    <li>
+      <a href="#" aria-label="Previous">
+        <span aria-hidden="true">&laquo;</span>
+      </a>
+    </li>
+    <li class="active"><a href="#">1</a></li>
+    <li><a href="#">2</a></li>
+    <li><a href="#">3</a></li>
+    <li><a href="#">4</a></li>
+    <li><a href="#">5</a></li>
+    <li><a href="#">6</a></li>
+    <li><a href="#">7</a></li>
+    <li><a href="#">8</a></li>
+    <li><a href="#">9</a></li>
+    <li>
+      <a href="#" aria-label="Next">
+        <span aria-hidden="true">&raquo;</span>
+      </a>
+    </li>
+  </ul>
+</nav>
+
+ <div class="row text-center">
+ <div class="page-header">
+  <h1>推荐楼盘</h1>
+</div>
+
+  <div class="col-sm-6 col-md-3">
+    <div class="thumbnail">
+      <a href="newcon.html"><img src="img/new/newhomeid/new1.jpg" alt="伦敦街"> </a>  
+      <div class="caption">
+        <p id="ttp"><span>均价</span>4800元</p>
+        <h4>伦敦街</h4>
+        <p>城区御东新区南环桥桥头</p>
+      </div>
+    </div>
+  </div>
+   <div class="col-sm-6 col-md-3">
+    <div class="thumbnail">
+      <a href="newcon.html"><img src="img/new/newhomeid/new2.jpg" alt="伦敦街"> </a>  
+      <div class="caption">
+        <p id="ttp"><span>均价</span>4550元</p>
+        <h4>千禧·御东画卷</h4>
+        <p>御河东路西、永和路东、开源街南</p>
+      </div>
+    </div>
+  </div>
+    <div class="col-sm-6 col-md-3">
+    <div class="thumbnail">
+      <a href="newcon.html"><img src="img/new/newhomeid/new3.jpg" alt="伦敦街"> </a>  
+      <div class="caption">
+        <p id="ttp"><span>均价</span>4150元</p>
+        <h4>西京府</h4>
+        <p>城区御东西京街</p>
+      </div>
+    </div>
+  </div>
+   <div class="col-sm-6 col-md-3">
+    <div class="thumbnail">
+      <a href="newcon.html"><img src="img/new/newhomeid/new4.jpg" alt="伦敦街"> </a>  
+      <div class="caption">
+        <p id="ttp"><span>均价</span>3800元</p>
+        <h4>御昌佳园</h4>
+        <p>大同市恒安街北侧</p>
+      </div>
+    </div>
+  </div>
+
+</div>
+</div> 
+ 
+ 
+ 
+</div>
+<footer>
+			<div style=" color:#999" class="container">
+				<div class="row">
+                       <!-- <div class="col-xs-12 col-sm-6">
+                                <div class="row">
+                                <ul class="footer-nav">
+                               <a href="#"> <li>关于我们</li></a>
+                               <a href="#"><li>联系我们</li></a>
+                               <a href="#"><li>加入我们</li></a>
+                               <a href="#"> <li>信誉房产</li></a>
+                               <a href="#"><li>常见问题</li></a>
+                               <a href="#"> <li>合作伙伴</li></a>
+                                
+                                </ul>
+                                </div>-->
+                                <div class="cop text-center">
+                             <p>Copyright © 2015 0352fang.com All Rights Reserved | 晋ICP备 13046642号</p>
+                         </div>
+                         </div>
+					
+						<!--<div class="col-xs-12 col-sm-6">
+							<h3 class="pull-right">Contact Us</h3>
+
+
+	
+						</div>-->
+                    
+					
+					</div>
+				</div>
+				
+		
+		</footer>
+
+
+
+    
+  </body>
+</html>

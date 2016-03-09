@@ -1,0 +1,677 @@
+<!DOCTYPE html html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">  
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>大同房产网-置业顾问</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/liaun.css" rel="stylesheet">
+
+<script src="http://lib.sinaapp.com/js/jquery/1.9.1/jquery-1.9.1.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+
+  </head>
+  <body>
+    <nav role="navigation" id="header" class="navbar navbar-inverse navbar-fixed-top">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" data-toggle="collapse" data-target="#navigation" class="navbar-toggle collapsed">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a href="index.html" class="navbar-brand logo"><img src="img/logo.png" id="logo"></a>
+    </div>
+    <div id="navigation" class="collapse navbar-collapse" >
+      <ul class="nav navbar-nav">
+        
+            <li ><a href="index.html" target="_black">首页</a> </li>
+            <li ><a href="newhomelist.html" target="_black">新房</a> </li>
+            <li > <a href="oldhomelist.html" target="_black">二手房</a> </li>
+            <li ><a href="rentinglist.html" target="_black">租房</a></li>
+   
+            <li class="dropdown">
+              <a href="newhomelist.html" target="_black" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">独家房源<span class="caret"></span></a>
+              <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+                  <li><a href="newhomelist.html" target="_black">特价楼盘</a></li>
+                  <li><a href="oldhomelist.html" target="_black">托管房源</a></li>
+              </ul>
+            </li>
+      </ul>
+      
+       <form class="navbar-form navbar-left" role="search">
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="小区/学校/开发商">
+        </div>
+        <button type="submit" class="btn btn-default">找房</button>
+       </form>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="addhome.html" target="_blank">发布信息</a></li>
+        <li><a href="#denglu"  data-toggle="modal" data-target="#denglu">登陆</a></li>
+        <li><a href="#zhuce"  data-toggle="modal" data-target="#zhuce">注册</a> </li>
+      </ul>
+    </div>
+  </div>
+</nav> <!-----header  end---->
+
+
+<div id="denglu" class="modal fade" role="dialog" aria-labelledby="gridSystemModalLabel" >
+  <div class="modal-dialog" role="document" id="log">
+    <div class="modal-content" >
+      <div class="modal-header">
+      <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true"> &times;</span></button>
+      <p class="modal-title" id="gridSystemModalLabel"><b>用户登陆</b><span class="pull-right" >还没有账号 <a href="#zhuce"  data-toggle="modal" data-target="#zhuce" data-dismiss="modal">立即注册</span></a></p>
+      </div>
+      <div class="modal-body">
+         <div class="input-group">
+         <span class="input-group-addon glyphicon glyphicon-user" id="sizing-addon1"></span>
+         <input type="text" class="form-control" placeholder="请输入手机号或者邮箱" aria-describedby="sizing-addon1">
+         </div>
+         <div class="input-group">
+         <span class="input-group-addon  glyphicon glyphicon-lock" id="sizing-addon1"></span>
+         <input type="password" class="form-control" placeholder="请输入密码" aria-describedby="sizing-addon1">
+         </div>
+      </div>
+      <a class="pull-right" href="#"><p>忘记密码</p></a>
+      <div class="text-center">
+        <button type="button" class="btn btn-success">立即登陆</button>
+      </div>
+
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->     
+  
+    
+     <!---登陆框---->
+     
+     
+     
+           <div id="zhuce" class="modal fade" role="dialog" aria-labelledby="gridSystemModalLabel" >
+  <div class="modal-dialog" role="document" id="log">
+    <div class="modal-content" >
+      <div class="modal-header">
+      <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true"> &times;</span></button>
+      <p class="modal-title" id="gridSystemModalLabel"><b>用户注册</b><span class="pull-right" >已有账号<a href="#denglu" data-toggle="modal" data-target="#denglu"  data-dismiss="modal">立即登陆</span></a></p>
+      </div>
+      <div class="modal-body">
+         <div class="input-group">
+         <span class="input-group-addon glyphicon glyphicon-user" id="sizing-addon1"></span>
+         <input type="text" class="form-control" placeholder="请输入手机号或者邮箱" aria-describedby="sizing-addon1">
+         </div>
+         <div class="input-group">
+         <span class="input-group-addon glyphicon glyphicon-ok" id="sizing-addon1"></span>
+         <input type="text" class="form-control" placeholder="请输入验证码" aria-describedby="sizing-addon1">
+         <span class="input-group-addon" id="sizing-addon1">获取验证码</span>
+         </div>
+         <div class="input-group">
+         <span class="input-group-addon  glyphicon glyphicon-lock" id="sizing-addon1"></span>
+         <input type="password" class="form-control" placeholder="请输入密码" aria-describedby="sizing-addon1">
+         </div>
+         <div class="input-group">
+         <span class="input-group-addon  glyphicon glyphicon-lock" id="sizing-addon1"></span>
+         <input type="password" class="form-control" placeholder="请再次输入密码" aria-describedby="sizing-addon1">
+         </div>
+      </div>
+      <a class="pull-right" href="#"><p>忘记密码</p></a>
+      <div class="text-center">
+        <button type="button" class="btn btn-success">立即注册</button>
+      </div>
+
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->     
+  
+    
+     <!---注册框---->
+
+
+ 
+ 
+
+ 
+<div id="main">
+<div class="jumbotron" id="adviser_banner">
+
+</div>  
+
+
+
+
+<div class="container">
+<div id="adviserlist">
+		 <div class="breadcrumbs">
+
+                            <a href="index.html">大同房产网</a>
+                            <span class="stp">&nbsp;&gt;&nbsp;</span> <a href="#">置业顾问</a>
+
+    </div>
+     <div class="row">
+   
+        <div class="col-md-4">
+        <div id="adviserid"> 
+        <a href="advisercon.html"><img class="pull-left" src="img/adviser/niuzhiguo.png"></a>
+        <div class=" text-center">
+        
+          <h3><a href="advisercon.html">牛志国</a> <span>店经理</span></h3>
+          <p><b>负责区域：</b>棚户区S区、矿务局</p>
+          <p><span class="glyphicon glyphicon-phone"></span> 13363403794</p>
+         <!-- <a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=846420132&site=qq&menu=yes">QQ在线交谈</a>-->
+
+           <p >评价
+           <span id="star" class="glyphicon glyphicon-star"></span> 
+           <span id="star" class="glyphicon glyphicon-star"></span> 
+           <span id="star" class="glyphicon glyphicon-star"></span> 
+           <span id="star" class="glyphicon glyphicon-star"></span>
+           <span id="star" class="glyphicon glyphicon-star"></span>
+           </p>
+       </div>
+       </div>
+       </div>
+  
+  
+        <div class="col-md-4">
+        <div id="adviserid"> 
+        <a href="advisercon.html"><img class="pull-left" src="img/adviser/yuanjinbao.png"></a>
+        <div class=" text-center">
+        
+          <h3><a href="advisercon.html">袁金宝</a> <span>店经理</span></h3>
+          <p><b>负责区域：</b>一中学区及周边</p>
+          <p><span class="glyphicon glyphicon-phone"></span> 13753235719</p>
+         <!-- <a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=846420132&site=qq&menu=yes">QQ在线交谈</a>-->
+
+           <p >评价
+           <span id="star" class="glyphicon glyphicon-star"></span> 
+           <span id="star" class="glyphicon glyphicon-star"></span> 
+           <span id="star" class="glyphicon glyphicon-star"></span> 
+           <span id="star" class="glyphicon glyphicon-star"></span>
+           <span id="nostar" class="glyphicon glyphicon-star"></span>
+           </p>
+       </div>
+       </div>
+       </div>
+       
+       
+        <div class="col-md-4">
+        <div id="adviserid"> <a href="advisercon.html"><img class="pull-left" src="img/adviser/guanlong.png"></a>
+        <div class=" text-center">
+        
+          <h3><a href="advisercon.html">管龙</a> <span>店经理</span></h3>
+          <p><b>负责区域：</b>北辰花园及火车站周边</p>
+          <p><span class="glyphicon glyphicon-phone"></span>15934210699</p>
+         <!-- <a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=846420132&site=qq&menu=yes">QQ在线交谈</a>-->
+
+            <p >评价
+           <span id="star" class="glyphicon glyphicon-star"></span> 
+           <span id="star" class="glyphicon glyphicon-star"></span> 
+           <span id="star" class="glyphicon glyphicon-star"></span> 
+           <span id="star" class="glyphicon glyphicon-star"></span>
+           <span id="star" class="glyphicon glyphicon-star"></span>
+           </p>
+       </div>
+       </div>
+       </div>
+  
+    <div class="col-md-4">
+        <div id="adviserid"> 
+        <a href="advisercon.html"><img class="pull-left" src="img/adviser/qiaojianhua.png"></a>
+        <div class=" text-center">
+        
+          <h3><a href="advisercon.html">乔建华</a> <span>店经理</span></h3>
+          <p><b>负责区域：</b>天胜雅园、新五中学区</p>
+          <p><span class="glyphicon glyphicon-phone"></span>15034238287</p>
+         <!-- <a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=846420132&site=qq&menu=yes">QQ在线交谈</a>-->
+
+           <p >评价
+           <span id="star" class="glyphicon glyphicon-star"></span> 
+           <span id="star" class="glyphicon glyphicon-star"></span> 
+           <span id="star" class="glyphicon glyphicon-star"></span> 
+           <span id="star" class="glyphicon glyphicon-star"></span>
+           <span id="star" class="glyphicon glyphicon-star"></span>
+           </p>
+       </div>
+       </div>
+       </div>
+  
+  
+        <div class="col-md-4">
+        <div id="adviserid">
+         <a href="advisercon.html"><img class="pull-left" src="img/adviser/sunzilin.png"></a>
+        <div class=" text-center">
+        
+          <h3><a href="advisercon.html">孙梓粼 </a><span>店经理</span></h3>
+          <p><b>负责区域：</b>二中学区及御东周边</p>
+          <p><span class="glyphicon glyphicon-phone"></span> 15934025909</p>
+         <!-- <a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=846420132&site=qq&menu=yes">QQ在线交谈</a>-->
+
+           <p >评价
+           <span id="star" class="glyphicon glyphicon-star"></span> 
+           <span id="star" class="glyphicon glyphicon-star"></span> 
+           <span id="star" class="glyphicon glyphicon-star"></span> 
+           <span id="star" class="glyphicon glyphicon-star"></span>
+           <span id="nostar" class="glyphicon glyphicon-star"></span>
+           </p>
+       </div>
+       </div>
+       </div>
+       
+       
+        <div class="col-md-4">
+        <div id="adviserid"> 
+        <a href="advisercon.html"><img class="pull-left" src="img/adviser/xuanjianhua.png"></a>
+        <div class=" text-center">
+        
+          <h3><a href="advisercon.html">薛建华</a> <span>店经理</span></h3>
+          <p><b>负责区域：</b>三中学区及周边环</p>
+          <p><span class="glyphicon glyphicon-phone-alt"></span> 0352-7654321</p>
+         <!-- <a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=846420132&site=qq&menu=yes">QQ在线交谈</a>-->
+
+            <p >评价
+           <span id="star" class="glyphicon glyphicon-star"></span> 
+           <span id="star" class="glyphicon glyphicon-star"></span> 
+           <span id="star" class="glyphicon glyphicon-star"></span> 
+           <span id="star" class="glyphicon glyphicon-star"></span>
+           <span id="star" class="glyphicon glyphicon-star"></span>
+           </p>
+       </div>
+       </div>
+       </div>
+       
+       
+         <div class="col-md-4">
+        <div id="adviserid"> <a href="advisercon.html"><img class="pull-left" src="img/adviser/zhanglixia.png"></a>
+        <div class=" text-center">
+        
+          <h3><a href="advisercon.html">张利霞</a> <span>店经理</span></h3>
+          <p><b>负责区域：</b>棚户区J区、矿务局</p>
+          <p><span class="glyphicon glyphicon-phone"></span>13753226605</p>
+         <!-- <a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=846420132&site=qq&menu=yes">QQ在线交谈</a>-->
+
+           <p >评价
+           <span id="star" class="glyphicon glyphicon-star"></span> 
+           <span id="star" class="glyphicon glyphicon-star"></span> 
+           <span id="star" class="glyphicon glyphicon-star"></span> 
+           <span id="star" class="glyphicon glyphicon-star"></span>
+           <span id="star" class="glyphicon glyphicon-star"></span>
+           </p>
+       </div>
+       </div>
+       </div>
+  
+  
+        <div class="col-md-4">
+        <div id="adviserid"> 
+        <a href="advisercon.html"><img class="pull-left" src="img/adviser/shizhanfei.png"></a>
+        <div class=" text-center">
+        
+          <h3><a href="advisercon.html">施展飞</a> <span>店经理</span></h3>
+          <p><b>负责区域：</b>一中学区及周边</p>
+          <p><span class="glyphicon glyphicon-phone-alt"></span>15935204409</p>
+         <!-- <a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=846420132&site=qq&menu=yes">QQ在线交谈</a>-->
+
+           <p >评价
+           <span id="star" class="glyphicon glyphicon-star"></span> 
+           <span id="star" class="glyphicon glyphicon-star"></span> 
+           <span id="star" class="glyphicon glyphicon-star"></span> 
+           <span id="star" class="glyphicon glyphicon-star"></span>
+           <span id="nostar" class="glyphicon glyphicon-star"></span>
+           </p>
+       </div>
+       </div>
+       </div>
+       
+       
+        <div class="col-md-4">
+        <div id="adviserid"> <a href="advisercon.html"><img class="pull-left" src="img/adviser/chenxiuzhi.png"></a>
+        <div class=" text-center">
+        
+          <h3><a href="advisercon.html">陈秀枝</a> <span>置业顾问</span></h3>
+          <p><b>负责区域：</b> 一中学区及周边</p>
+          <p><span class="glyphicon glyphicon-phone"></span>15935211745</p>
+         <!-- <a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=846420132&site=qq&menu=yes">QQ在线交谈</a>-->
+
+            <p >评价
+           <span id="star" class="glyphicon glyphicon-star"></span> 
+           <span id="star" class="glyphicon glyphicon-star"></span> 
+           <span id="star" class="glyphicon glyphicon-star"></span> 
+           <span id="star" class="glyphicon glyphicon-star"></span>
+           <span id="star" class="glyphicon glyphicon-star"></span>
+           </p>
+       </div>
+       </div>
+       </div>
+       
+       
+       
+         <div class="col-md-4">
+        <div id="adviserid"> <a href="advisercon.html"><img class="pull-left" src="img/adviser/hanyang.png"></a>
+        <div class=" text-center">
+        
+          <h3><a href="advisercon.html">韩阳</a> <span>置业顾问</span></h3>
+          <p><b>负责区域：</b>一中学区及周边</p>
+          <p><span class="glyphicon glyphicon-phone-alt"></span>13133330124</p>
+         <!-- <a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=846420132&site=qq&menu=yes">QQ在线交谈</a>-->
+
+           <p >评价
+           <span id="star" class="glyphicon glyphicon-star"></span> 
+           <span id="star" class="glyphicon glyphicon-star"></span> 
+           <span id="star" class="glyphicon glyphicon-star"></span> 
+           <span id="star" class="glyphicon glyphicon-star"></span>
+           <span id="star" class="glyphicon glyphicon-star"></span>
+           </p>
+       </div>
+       </div>
+       </div>
+  
+  
+        <div class="col-md-4">
+        <div id="adviserid"> <a href="advisercon.html"><img class="pull-left" src="img/adviser/xieguoquan.png"></a>
+        <div class=" text-center">
+        
+          <h3><a href="advisercon.html">解国权</a> <span>置业顾问</span></h3>
+          <p><b>负责区域：</b>棚户区及矿区</p>
+          <p><span class="glyphicon glyphicon-phone"></span> 18649570611</p>
+         <!-- <a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=846420132&site=qq&menu=yes">QQ在线交谈</a>-->
+
+           <p >评价
+           <span id="star" class="glyphicon glyphicon-star"></span> 
+           <span id="star" class="glyphicon glyphicon-star"></span> 
+           <span id="star" class="glyphicon glyphicon-star"></span> 
+           <span id="star" class="glyphicon glyphicon-star"></span>
+           <span id="nostar" class="glyphicon glyphicon-star"></span>
+           </p>
+       </div>
+       </div>
+       </div>
+       
+       
+        <div class="col-md-4">
+        <div id="adviserid"> <a href="advisercon.html"><img class="pull-left" src="img/adviser/gexiangyun.png"></a>
+        <div class=" text-center">
+        
+          <h3><a href="advisercon.html">葛祥云</a> <span>置业顾问</span></h3>
+          <p><b>负责区域：</b>北辰花园及火车站周边</p>
+          <p><span class="glyphicon glyphicon-phone"></span>15235273678</p>
+         <!-- <a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=846420132&site=qq&menu=yes">QQ在线交谈</a>-->
+
+            <p >评价
+           <span id="star" class="glyphicon glyphicon-star"></span> 
+           <span id="star" class="glyphicon glyphicon-star"></span> 
+           <span id="star" class="glyphicon glyphicon-star"></span> 
+           <span id="star" class="glyphicon glyphicon-star"></span>
+           <span id="star" class="glyphicon glyphicon-star"></span>
+           </p>
+       </div>
+       </div>
+       </div>
+       
+       
+       
+         <div class="col-md-4">
+        <div id="adviserid"> <a href="advisercon.html"><img class="pull-left" src="img/adviser/kangting.png"></a>
+        <div class=" text-center">
+        
+          <h3><a href="advisercon.html">康婷</a> <span>置业顾问</span></h3>
+          <p><b>负责区域：</b>北辰花园及火车站周边</p>
+          <p><span class="glyphicon glyphicon-phone"></span>13934790929</p>
+         <!-- <a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=846420132&site=qq&menu=yes">QQ在线交谈</a>-->
+
+           <p >评价
+           <span id="star" class="glyphicon glyphicon-star"></span> 
+           <span id="star" class="glyphicon glyphicon-star"></span> 
+           <span id="star" class="glyphicon glyphicon-star"></span> 
+           <span id="star" class="glyphicon glyphicon-star"></span>
+           <span id="star" class="glyphicon glyphicon-star"></span>
+           </p>
+       </div>
+       </div>
+       </div>
+  
+  
+        <div class="col-md-4">
+        <div id="adviserid"> <a href="advisercon.html"><img class="pull-left" src="img/adviser/liuliwei.png"></a>
+        <div class=" text-center">
+        
+          <h3><a href="advisercon.html">刘利伟 </a><span>置业顾问</span></h3>
+          <p><b>负责区域：</b>棚户区及矿区</p>
+          <p><span class="glyphicon glyphicon-phone"></span> 15525242301</p>
+         <!-- <a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=846420132&site=qq&menu=yes">QQ在线交谈</a>-->
+
+           <p >评价
+           <span id="star" class="glyphicon glyphicon-star"></span> 
+           <span id="star" class="glyphicon glyphicon-star"></span> 
+           <span id="star" class="glyphicon glyphicon-star"></span> 
+           <span id="star" class="glyphicon glyphicon-star"></span>
+           <span id="nostar" class="glyphicon glyphicon-star"></span>
+           </p>
+       </div>
+       </div>
+       </div>
+       
+       
+        <div class="col-md-4">
+        <div id="adviserid"> <a href="advisercon.html"><img class="pull-left" src="img/adviser/liuzhigang.png"></a>
+        <div class=" text-center">
+        
+          <h3><a href="advisercon.html">刘志刚</a> <span>置业顾问</span></h3>
+          <p><b>负责区域：</b>一中学区及周边</p>
+          <p><span class="glyphicon glyphicon-phone"></span>13994440914</p>
+         <!-- <a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=846420132&site=qq&menu=yes">QQ在线交谈</a>-->
+
+            <p >评价
+           <span id="star" class="glyphicon glyphicon-star"></span> 
+           <span id="star" class="glyphicon glyphicon-star"></span> 
+           <span id="star" class="glyphicon glyphicon-star"></span> 
+           <span id="star" class="glyphicon glyphicon-star"></span>
+           <span id="star" class="glyphicon glyphicon-star"></span>
+           </p>
+       </div>
+       </div>
+       </div>
+       
+       
+       
+         <div class="col-md-4">
+        <div id="adviserid"> <a href="advisercon.html"><img class="pull-left" src="img/adviser/mafei.png"></a>
+        <div class=" text-center">
+        
+          <h3><a href="advisercon.html">马飞</a> <span>置业顾问</span></h3>
+          <p><b>负责区域：</b>北辰花园及火车站周边</p>
+          <p><span class="glyphicon glyphicon-phone"></span>18722425936</p>
+         <!-- <a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=846420132&site=qq&menu=yes">QQ在线交谈</a>-->
+
+           <p >评价
+           <span id="star" class="glyphicon glyphicon-star"></span> 
+           <span id="star" class="glyphicon glyphicon-star"></span> 
+           <span id="star" class="glyphicon glyphicon-star"></span> 
+           <span id="star" class="glyphicon glyphicon-star"></span>
+           <span id="star" class="glyphicon glyphicon-star"></span>
+           </p>
+       </div>
+       </div>
+       </div>
+  
+  
+        <div class="col-md-4">
+        <div id="adviserid"> <a href="advisercon.html"><img class="pull-left" src="img/adviser/majie.png"></a>
+        <div class=" text-center">
+        
+          <h3><a href="advisercon.html">马杰</a> <span>置业顾问</span></h3>
+          <p><b>负责区域：</b>北辰花园及火车站周边</p>
+          <p><span class="glyphicon glyphicon-phone"></span> 13935215568</p>
+         <!-- <a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=846420132&site=qq&menu=yes">QQ在线交谈</a>-->
+
+           <p >评价
+           <span id="star" class="glyphicon glyphicon-star"></span> 
+           <span id="star" class="glyphicon glyphicon-star"></span> 
+           <span id="star" class="glyphicon glyphicon-star"></span> 
+           <span id="star" class="glyphicon glyphicon-star"></span>
+           <span id="nostar" class="glyphicon glyphicon-star"></span>
+           </p>
+       </div>
+       </div>
+       </div>
+       
+       
+        <div class="col-md-4">
+        <div id="adviserid"> <a href="advisercon.html"><img class="pull-left" src="img/adviser/muzehua.png"></a>
+        <div class=" text-center">
+        
+          <h3><a href="advisercon.html">穆泽华</a> <span>置业顾问</span></h3>
+          <p><b>负责区域：</b>北辰花园及火车站周边</p>
+          <p><span class="glyphicon glyphicon-phone"></span>18734260809</p>
+         <!-- <a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=846420132&site=qq&menu=yes">QQ在线交谈</a>-->
+
+            <p >评价
+           <span id="star" class="glyphicon glyphicon-star"></span> 
+           <span id="star" class="glyphicon glyphicon-star"></span> 
+           <span id="star" class="glyphicon glyphicon-star"></span> 
+           <span id="star" class="glyphicon glyphicon-star"></span>
+           <span id="star" class="glyphicon glyphicon-star"></span>
+           </p>
+       </div>
+       </div>
+       </div>
+       
+       
+       
+         <div class="col-md-4">
+        <div id="adviserid"> <a href="advisercon.html"><img class="pull-left" src="img/adviser/wangjing.png"></a>
+        <div class=" text-center">
+        
+          <h3><a href="advisercon.html">王晶</a> <span>置业顾问</span></h3>
+          <p><b>负责区域：</b>棚户区及矿务局</p>
+          <p><span class="glyphicon glyphicon-phone"></span> 13753237292</p>
+         <!-- <a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=846420132&site=qq&menu=yes">QQ在线交谈</a>-->
+
+           <p >评价
+           <span id="star" class="glyphicon glyphicon-star"></span> 
+           <span id="star" class="glyphicon glyphicon-star"></span> 
+           <span id="star" class="glyphicon glyphicon-star"></span> 
+           <span id="star" class="glyphicon glyphicon-star"></span>
+           <span id="star" class="glyphicon glyphicon-star"></span>
+           </p>
+       </div>
+       </div>
+       </div>
+  
+  
+        <div class="col-md-4">
+        <div id="adviserid"> <a href="advisercon.html"><img class="pull-left" src="img/adviser/wangjianfei.png"></a>
+        <div class=" text-center">
+        
+          <h3><a href="advisercon.html">王建飞</a> <span>置业顾问</span></h3>
+          <p><b>负责区域：</b>北辰花园及火车站周边</p>
+          <p><span class="glyphicon glyphicon-phone"></span> 18703420830</p>
+         <!-- <a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=846420132&site=qq&menu=yes">QQ在线交谈</a>-->
+
+           <p >评价
+           <span id="star" class="glyphicon glyphicon-star"></span> 
+           <span id="star" class="glyphicon glyphicon-star"></span> 
+           <span id="star" class="glyphicon glyphicon-star"></span> 
+           <span id="star" class="glyphicon glyphicon-star"></span>
+           <span id="nostar" class="glyphicon glyphicon-star"></span>
+           </p>
+       </div>
+       </div>
+       </div>
+       
+       
+        <div class="col-md-4">
+        <div id="adviserid"> <a href="advisercon.html"><img class="pull-left" src="img/adviser/yangyoubo.png"></a>
+        <div class=" text-center">
+        
+          <h3><a href="advisercon.html">杨有博</a> <span>置业顾问</span></h3>
+          <p><b>负责区域：</b>一中学区及周边</p>
+          <p><span class="glyphicon glyphicon-phone-alt"></span>	15234209611</p>
+         <!-- <a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=846420132&site=qq&menu=yes">QQ在线交谈</a>-->
+
+            <p >评价
+           <span id="star" class="glyphicon glyphicon-star"></span> 
+           <span id="star" class="glyphicon glyphicon-star"></span> 
+           <span id="star" class="glyphicon glyphicon-star"></span> 
+           <span id="star" class="glyphicon glyphicon-star"></span>
+           <span id="star" class="glyphicon glyphicon-star"></span>
+           </p>
+       </div>
+       </div>
+       </div>
+  
+  <nav class="text-center">
+  			<ul class="pagination">
+   				 <li>
+                  <a href="#" aria-label="Previous">
+                    <span aria-hidden="true">&laquo;</span>
+                  </a>
+                </li>
+                <li><a href="#">1</a></li>
+                <li><a href="#">2</a></li>
+                <li><a href="#">3</a></li>
+                <li><a href="#">4</a></li>
+                <li><a href="#">5</a></li>
+                
+                <li>
+                  <a href="#" aria-label="Next">
+                    <span aria-hidden="true">&raquo;</span>
+                  </a>
+   			 </li>
+ 		 </ul>
+		</nav>
+  
+  
+   </div>
+
+
+
+
+</div>
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+<footer>
+			<div style=" color:#999" class="container">
+				<div class="row">
+                       <!-- <div class="col-xs-12 col-sm-6">
+                                <div class="row">
+                                <ul class="footer-nav">
+                               <a href="#"> <li>关于我们</li></a>
+                               <a href="#"><li>联系我们</li></a>
+                               <a href="#"><li>加入我们</li></a>
+                               <a href="#"> <li>信誉房产</li></a>
+                               <a href="#"><li>常见问题</li></a>
+                               <a href="#"> <li>合作伙伴</li></a>
+                                
+                                </ul>
+                                </div>-->
+                                <div class="cop text-center">
+                             <p>Copyright © 2015 0352fang.com All Rights Reserved | 晋ICP备 13046642号</p>
+                         </div>
+                         </div>
+					
+						<!--<div class="col-xs-12 col-sm-6">
+							<h3 class="pull-right">Contact Us</h3>
+
+
+	
+						</div>-->
+                    
+					
+					</div>
+				</div>
+				
+		
+		</footer>
+
+
+    
+  </body>
+</html>

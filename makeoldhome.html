@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <title>大同房产网-修改二手房信息</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/liaun.css" rel="stylesheet">
+    <link href="css/fileinput.css" media="all" rel="stylesheet" type="text/css" />
+  
+<script src="http://lib.sinaapp.com/js/jquery/1.9.1/jquery-1.9.1.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/fileinput.js"></script>
+<script src="js/fileinput_locale_zh.js"></script> 
+ </head>
+ <style>
+
+ .inputm{margin-top:20px;}
+ #sel_title{
+	 width:10%; 
+	 float:left; 
+	 height:46px;
+	padding: 10px 16px;
+	font-size: 18px;
+	line-height: 1.33333;
+	border-radius: 6px;
+	 }
+ </style>
+
+<body>
+	<div class="main container">
+
+		<div class="row " style="width: 60%; margin-left: 20%;">
+			<!--房源基本信息-->
+			<div class="page-header">
+				<h3>修改房源信息</h3>
+			</div>
+			<form id="addHouseForm" name="addHouseForm" action="" method="post">
+			<div class="input-group input-group-lg inputm">
+				<span class="input-group-addon" id="basic-addon1">小区名称</span> 
+				<input type="text" required class="form-control" placeholder="小区名称" aria-describedby="basic-addon1">
+			</div>
+			
+			<!--楼层-->
+			<div class="input-group input-group-lg inputm">
+				<span class="input-group-addon" id="basic-addon1">楼层</span>
+				<!-- <form class="form-inline"> -->
+					<input type="number" required min="0" max="50" class="form-control" placeholder="第几层" aria-describedby="basic-addon1" style="width: 47%; margin-right: 5%; height: 46px"> 
+					<input type="number" required min="0" max="50" class="form-control" placeholder="共几层" aria-describedby="basic-addon1" style="width: 48%; height: 46px">
+				<!-- </form> -->
+			</div>
+			
+			<div class="input-group input-group-lg inputm">
+				<span class="input-group-addon" id="basic-addon1">位置</span>
+					<input type="text" required class="form-control" placeholder="楼号" aria-describedby="basic-addon1" style="width: 30%; margin-right: 5%; height: 46px"> 
+					<input type="text"  required class="form-control" placeholder="单元号" aria-describedby="basic-addon1" style="width: 30%; margin-right: 5%; height: 46px"> 
+					<input type="text"  required class="form-control" placeholder="房间号" aria-describedby="basic-addon1" style="width: 30%; height: 46px">
+			</div>
+
+			<div class="input-group input-group-lg inputm">
+				<span class="input-group-addon" id="basic-addon1">户型</span>
+				<!-- <form class="form-inline"> -->
+					<input type="number" required min="0" max="10" class="form-control" placeholder="室" aria-describedby="basic-addon1" style="width: 30%; margin-right: 5%; height: 46px"> 
+					<input type="number" required min="0" max="10" class="form-control" placeholder="厅" aria-describedby="basic-addon1" style="width: 30%; margin-right: 5%; height: 46px"> 
+					<input type="number" required min="0" max="10" class="form-control" placeholder="卫" aria-describedby="basic-addon1" style="width: 30%; height: 46px">
+				<!-- </form> -->
+			</div>
+			<div class="input-group input-group-lg inputm">
+				<span class="input-group-addon" id="basic-addon1">面积</span> 
+				<input type="number" required min="0" max="1000" class="form-control" placeholder="面积" aria-describedby="basic-addon1"> 
+				<span class="input-group-addon" id="basic-addon1" style="width: 60px;">m²</span>
+			</div>
+			<div class="input-group input-group-lg inputm">
+				<span class="input-group-addon" id="basic-addon1">总价</span> 
+				<input type="number" required min="0" max="1000" class="form-control" placeholder="总价" aria-describedby="basic-addon1"> 
+				<span class="input-group-addon" id="basic-addon1" style="width: 60px;">&nbsp;万元</span>
+			</div>
+
+			<!--房源选填信息
+			<div class="page-header">
+				<h3>房源选填信息</h3>
+			</div>-->
+			<div class="input-group input-group-lg inputm">
+				<span class="input-group-addon" id="basic-addon1" style="margin-right:1%">类型</span>
+			<!--类型-->
+
+     <select class="input-xlarge controls btn  btn-lg btn-default" >
+                      <option>新旧状况</option>
+                      <option>新房</option>
+                      <option>二手房</option>
+                      <option>出租房</option>
+                    </select>
+	 <select class="input-xlarge controls btn  btn-lg btn-default" >
+                      <option>房屋分类</option>
+                      <option>住宅</option>
+                      <option>公寓</option>
+                      <option>别墅</option>
+                      <option>写字楼</option>
+                    </select>
+       <select class="input-xlarge controls btn  btn-lg btn-default " >
+                      <option>装修情况</option>
+                      <option>豪装</option>
+                      <option>精装</option>
+                      <option>高装</option>
+                      <option>中装</option>
+					  <option>简装</option>
+					  <option>毛坯</option>
+                    </select>
+       <select class="input-xlarge controls btn  btn-lg btn-default">
+                      <option>朝向情况</option>
+                      <option>主卧朝南</option>
+                      <option>次卧朝南</option>
+                      <option>客厅朝南</option>
+                      <option>主次卧朝南</option>
+					  <option>主次厅朝南</option>
+                    </select>
+</div>
+
+  
+<!--产权-->
+   <div class="input-group input-group-lg inputm">
+    <span class="input-group-addon" id="basic-addon1" style="margin-right:1%">产权</span>
+    <!--产权年限-->
+     <select class="input-xlarge controls btn  btn-lg btn-default">
+                      <option>房产性质</option>
+                      <option>商品房</option>
+                      <option>小产权房</option>
+                      <option>公寓</option>
+                      <option>经济适用房</option>
+     </select>
+     <select class="input-xlarge controls btn  btn-lg btn-default">
+                      <option>产权年限</option>
+                      <option>70年产权</option>
+                      <option>50年产权</option>
+     </select>
+	 <select class="input-xlarge controls btn  btn-lg btn-default">
+                      <option>产权性质</option>
+                      <option>私产</option>
+                      <option>半公半私</option>
+					  <option>公私</option>
+     </select>
+
+  </div> 
+  <!--特色-->
+			<div class="input-group input-group-lg inputm">
+				<span class="input-group-addon" id="basic-addon1">房源特色</span> 
+				<input type="text" class="form-control" placeholder="描述房源特色" aria-describedby="basic-addon1">
+			</div>
+
+  
+  
+ <div id="addhomeradio"> 
+   <div class="input-group input-group-lg inputm">
+	<span>把边房&nbsp;&nbsp;&nbsp;</span>
+	<input id="sidehome" name="sidehome" type="radio" value="0">是
+	<input id="sidehome" name="sidehome" type="radio" value="1">否
+  </div>
+	 <div class="input-group input-group-lg inputm">
+    <span>付款方式</span>
+	<input id="sidehome" name="sidehome" type="radio" value="0">分期付款
+	<input id="sidehome" name="sidehome" type="radio" value="1">一次性付款
+   
+  </div> 
+
+  <div class="input-group input-group-lg inputm">
+	<span>房屋性质</span>
+	<input id="sidehome" name="sidehome" type="radio" value="0">公证
+	<input id="sidehome" name="sidehome" type="radio" value="1">过户
+  </div>
+  <div class="input-group input-group-lg inputm">
+	<span>房本情况</span>
+	<input id="sidehome" name="sidehome" type="radio" value="0">已办
+	<input id="sidehome" name="sidehome" type="radio" value="1">未办
+  </div>
+  <div class="input-group input-group-lg inputm">
+	<span>钥匙情况</span>
+	<input id="sidehome" name="sidehome" type="radio" value="0">已领
+	<input id="sidehome" name="sidehome" type="radio" value="1">未领
+  </div>
+</div>
+
+			<button class=" btn btn-lg btn-primary inputm" style="width: 100%; margin-bottom: 20px;">确认修改</button>
+		</form>
+		</div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <title>大同房产网-添加房子</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/liaun.css" rel="stylesheet">
+    <link href="css/fileinput.css" media="all" rel="stylesheet" type="text/css" />
+  
+<script src="http://lib.sinaapp.com/js/jquery/1.9.1/jquery-1.9.1.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/fileinput.js"></script>
+<script src="js/fileinput_locale_zh.js"></script> 
+ </head>
+ <style>
+ .inputm{margin-top:20px;}
+ </style>
+  <body>
+ <div class="main container">
+  
+  <div class="row "  >
+  <div class="page-header">
+  <h3>小区信息添加</h3>
+  </div>
+  <form>
+  <div class="input-group input-group-lg inputm">
+    <span class="input-group-addon" id="basic-addon1">小区名称</span>
+    <input type="text" class="form-control" required placeholder="小区名称" aria-describedby="basic-addon1">
+  </div>
+  <div class="input-group input-group-lg inputm">
+    <span class="input-group-addon" id="basic-addon1">物业名称</span>
+    <input type="text" class="form-control" required placeholder="物业名称" aria-describedby="basic-addon1">
+  </div>
+  <div class="input-group input-group-lg inputm">
+    <span class="input-group-addon" id="basic-addon1">占地面积</span>
+    <input type="text" class="form-control" required placeholder="占地面积" aria-describedby="basic-addon1">
+     <span class="input-group-addon" id="basic-addon1" style="width:60px;">m²</span>
+  </div>
+  <div class="input-group input-group-lg inputm">
+    <span class="input-group-addon" id="basic-addon1">&nbsp;绿化率&nbsp;&nbsp;</span>
+    <input type="text" class="form-control"  required placeholder="绿化率" aria-describedby="basic-addon1">
+      <span class="input-group-addon" id="basic-addon1" style="width:60px;">&nbsp;%</span>
+  </div>
+  <div class="input-group input-group-lg inputm">
+    <span class="input-group-addon" id="basic-addon1">公摊面积</span>
+    <input type="text" class="form-control"  placeholder="公摊面积" aria-describedby="basic-addon1">
+      <span class="input-group-addon" id="basic-addon1" style="width:60px;">m²</span>
+  </div>
+  <div class="input-group input-group-lg inputm">
+    <span class="input-group-addon" id="basic-addon1">市场均价</span>
+    <input type="text" class="form-control" required placeholder="市场均价" aria-describedby="basic-addon1">
+      <span class="input-group-addon" id="basic-addon1" style="width:60px;" >&nbsp;元</span>
+  </div>
+  <div class="input-group input-group-lg inputm">
+    <span class="input-group-addon" id="basic-addon1">所在街道</span>
+    <input type="text" class="form-control" required placeholder="所在街道" aria-describedby="basic-addon1">
+  </div>
+
+
+ <div class="page-header">
+  <h3>小区周边</h3>
+  </div>
+  
+ <div class="input-group input-group-lg inputm">
+    <span class="input-group-addon" id="basic-addon1">公交</span>
+    <input type="text" class="form-control"  required placeholder="输入小区附近的公交，用，隔开。 例如：15路，28路，···" aria-describedby="basic-addon1">
+  </div> 
+   <div class="input-group input-group-lg inputm">
+    <span class="input-group-addon" id="basic-addon1">学校</span>
+    <input type="text" class="form-control" required placeholder="输入小区附近的学校，用，隔开。 例如：大同市第一中学，···" aria-describedby="basic-addon1">
+  </div> 
+   <div class="input-group input-group-lg inputm">
+    <span class="input-group-addon" id="basic-addon1">医疗</span>
+    <input type="text" class="form-control" required placeholder="输入小区附近的医院及诊所，用，隔开。 例如：大同市第三人民医院，···" aria-describedby="basic-addon1">
+  </div> 
+   <div class="input-group input-group-lg inputm">
+    <span class="input-group-addon" id="basic-addon1">银行</span>
+    <input type="text" class="form-control" required placeholder="输入小区附近的银行，用，隔开。 例如：中国银行，···" aria-describedby="basic-addon1">
+  </div> 
+   <div class="input-group input-group-lg inputm">
+    <span class="input-group-addon" id="basic-addon1">购物</span>
+    <input type="text" class="form-control" required placeholder="输入小区附近的购物场所，用，隔开。 例如：百盛商城，沃尔玛超市，···" aria-describedby="basic-addon1">
+  </div> 
+   <div class="input-group input-group-lg inputm">
+    <span class="input-group-addon" id="basic-addon1">餐饮</span>
+    <input type="text" class="form-control" required placeholder="输入小区附近的餐饮场所，用，隔开。 例如：都市一家人，秦妈火锅，···" aria-describedby="basic-addon1">
+  </div> 
+  
+  
+  
+  
+  
+  
+  
+  <div id="imgload">
+ <div class="page-header">
+  <h3>上传图片</h3>
+  </div>
+  
+
+        <div class="form-group">
+                    <input id="file-4" type="file" required class="file" data-preview-file-type="text" data-upload-url="#" multiple data-min-file-count="6">
+                </div>
+
+</div>
+ 
+  <button type="submit" class=" btn btn-lg btn-primary inputm" style="width:100%; margin-bottom:20px;">确认添加</button>
+
+  </form>
+ </div>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  </body>
+ </html>

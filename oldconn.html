@@ -1,0 +1,347 @@
+<!DOCTYPE html html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">  
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>大同房产网-二手房详情</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/liaun.css" rel="stylesheet">
+
+<script src="http://lib.sinaapp.com/js/jquery/1.9.1/jquery-1.9.1.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+
+  </head>
+  <body>
+    <nav role="navigation" id="header" class="navbar navbar-inverse navbar-fixed-top">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" data-toggle="collapse" data-target="#navigation" class="navbar-toggle collapsed">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a href="index.html" class="navbar-brand logo"><img src="img/logo.png" id="logo"></a>
+    </div>
+    <div id="navigation" class="collapse navbar-collapse" >
+      <ul class="nav navbar-nav">
+        
+            <li ><a href="index.html" target="_black">首页</a> </li>
+            <li ><a href="newhomelist.html" target="_black">新房</a> </li>
+            <li > <a href="oldhomelist.html" target="_black">二手房</a> </li>
+            <li ><a href="rentinglist.html" target="_black">租房</a></li>
+   
+            <li class="dropdown">
+              <a href="newhomelist.html" target="_black" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">独家房源<span class="caret"></span></a>
+              <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+                  <li><a href="newhomelist.html" target="_black">特价楼盘</a></li>
+                  <li><a href="oldhomelist.html" target="_black">托管房源</a></li>
+              </ul>
+            </li>
+      </ul>
+      
+       <form class="navbar-form navbar-left" role="search">
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="小区/学校/开发商">
+        </div>
+        <button type="submit" class="btn btn-default">找房</button>
+       </form>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="addhome.html" target="_blank">发布信息</a></li>
+        <li><a href="#denglu"  data-toggle="modal" data-target="#denglu">登陆</a></li>
+        <li><a href="#zhuce"  data-toggle="modal" data-target="#zhuce">注册</a> </li>
+      </ul>
+    </div>
+  </div>
+</nav> <!-----header  end---->
+
+
+<div id="denglu" class="modal fade" role="dialog" aria-labelledby="gridSystemModalLabel" >
+  <div class="modal-dialog" role="document" id="log">
+    <div class="modal-content" >
+      <div class="modal-header">
+      <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true"> &times;</span></button>
+      <p class="modal-title" id="gridSystemModalLabel"><b>用户登陆</b><span class="pull-right" >还没有账号 <a href="#zhuce"  data-toggle="modal" data-target="#zhuce" data-dismiss="modal">立即注册</span></a></p>
+      </div>
+      <div class="modal-body">
+         <div class="input-group">
+         <span class="input-group-addon glyphicon glyphicon-user" id="sizing-addon1"></span>
+         <input type="text" class="form-control" placeholder="请输入手机号或者邮箱" aria-describedby="sizing-addon1">
+         </div>
+         <div class="input-group">
+         <span class="input-group-addon  glyphicon glyphicon-lock" id="sizing-addon1"></span>
+         <input type="password" class="form-control" placeholder="请输入密码" aria-describedby="sizing-addon1">
+         </div>
+      </div>
+      <a class="pull-right" href="#"><p>忘记密码</p></a>
+      <div class="text-center">
+        <button type="button" class="btn btn-success">立即登陆</button>
+      </div>
+
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->     
+  
+    
+     <!---登陆框---->
+     
+     
+     
+           <div id="zhuce" class="modal fade" role="dialog" aria-labelledby="gridSystemModalLabel" >
+  <div class="modal-dialog" role="document" id="log">
+    <div class="modal-content" >
+      <div class="modal-header">
+      <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true"> &times;</span></button>
+      <p class="modal-title" id="gridSystemModalLabel"><b>用户注册</b><span class="pull-right" >已有账号<a href="#denglu" data-toggle="modal" data-target="#denglu"  data-dismiss="modal">立即登陆</span></a></p>
+      </div>
+      <div class="modal-body">
+         <div class="input-group">
+         <span class="input-group-addon glyphicon glyphicon-user" id="sizing-addon1"></span>
+         <input type="text" class="form-control" placeholder="请输入手机号或者邮箱" aria-describedby="sizing-addon1">
+         </div>
+         <div class="input-group">
+         <span class="input-group-addon glyphicon glyphicon-ok" id="sizing-addon1"></span>
+         <input type="text" class="form-control" placeholder="请输入验证码" aria-describedby="sizing-addon1">
+         <span class="input-group-addon" id="sizing-addon1">获取验证码</span>
+         </div>
+         <div class="input-group">
+         <span class="input-group-addon  glyphicon glyphicon-lock" id="sizing-addon1"></span>
+         <input type="password" class="form-control" placeholder="请输入密码" aria-describedby="sizing-addon1">
+         </div>
+         <div class="input-group">
+         <span class="input-group-addon  glyphicon glyphicon-lock" id="sizing-addon1"></span>
+         <input type="password" class="form-control" placeholder="请再次输入密码" aria-describedby="sizing-addon1">
+         </div>
+      </div>
+      <a class="pull-right" href="#"><p>忘记密码</p></a>
+      <div class="text-center">
+        <button type="button" class="btn btn-success">立即注册</button>
+      </div>
+
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->     
+  
+    
+     <!---注册框---->
+
+
+ 
+ 
+ 
+ 
+
+ <div id="oldbanner">
+<div class="container">
+      <h3 class="pull-right"><span>83.3m²</span> <span>￥30.5万</span></h3>
+      
+      <img src="img/old/old1.jpg">
+</div>
+</div>  <!-----bannner--end---->
+ 
+ 
+ 
+ 
+<div id="main">
+<div class="container">
+ <div id="oldhomeid">
+   <div class="row">
+     <div class="col-md-4 text-center">
+       <div class="pull-right" id="uid">
+       <img class="img-circle" src="img/old/touxiang.png">
+       <p>Surea</p>
+       </div>
+     </div>
+     <div class="col-md-8">
+       <h3>柳港园两室一厅，真正拎包入住！优质学区</h3>
+       <address>大同市.城区.南三环.柳港园A区</address>
+       <p><span class="label label-info">学区房</span><span class="label label-danger">精装修</span><span class="label label-success">交通便利</span></p>
+
+     </div>
+   </div>
+ </div>
+
+ 
+ <div id="oldhomes">
+
+    <h3>房源描述<span>Home Describe</span></h3>
+    <p>通过大同房产网，您可以在人们家中找到独一无二的住宿体验——从独栋房子到公寓，再到树屋和圆顶小屋。以下的房源详情阐述了此房源所提供的一切。如有任何疑问，您可以直接联系房东。通过fang0352.com，您可以在人们家中找到独一无二的住宿体验——从独栋房子到公寓，再到树屋和圆顶小屋。以下的房源详情阐述了此房源所提供的一切。如有任何疑问，您可以直接联系房东。</p>
+   </div>
+
+
+
+ <div id="oldhomei">
+
+    <h3>房源信息<span>Home Information</span></h3>
+    <div id="oldhometable">
+    <table class="table text-center table-bordered">
+     <tr class="tableheader">
+       <td>户型</td>
+       <td>朝向</td>
+       <td>小区</td>
+       <td>产权</td>
+       <td>装修</td>
+       <td>类型</td>
+     </tr>
+     <tr>
+       <td>两室一厅</td>
+       <td>南北</td>
+       <td>柳港园</td>
+       <td>70年</td>
+       <td>精装修</td>
+       <td>商品房</td>
+     </tr>
+    </table>
+   
+    </div>  
+ </div>
+ 
+ <div id="oldhomeimg">
+  <h3>房源照片<span>Home Images</span></h3>
+  
+ <ul  id="gallery">
+  <li class="span3"><a href="img/old/oldhomeid/ershou1.jpg"><img alt=""  src="img/old/oldhomeid/ershou1.jpg"></a></li>
+  <li class="span3"><a href="img/old/oldhomeid/ershou2.jpg"><img alt=""  src="img/old/oldhomeid/ershou2.jpg"></a></li>
+  <li class="span3"><a href="img/old/oldhomeid/ershou3.jpg"><img alt=""  src="img/old/oldhomeid/ershou3.jpg"></a></li>
+  <li class="span3"><a href="img/old/oldhomeid/ershou4.jpg"><img alt=""  src="img/old/oldhomeid/ershou4.jpg"></a></li>
+  <li class="span3"><a href="img/old/oldhomeid/ershou5.jpg"><img alt=""  src="img/old/oldhomeid/ershou5.jpg"></a></li>
+  <li class="span3"><a href="img/old/oldhomeid/ershou6.jpg"><img alt=""  src="img/old/oldhomeid/ershou6.jpg"></a></li>
+  <li class="span3"><a href="img/old/oldhomeid/ershou7.jpg"><img alt=""  src="img/old/oldhomeid/ershou7.jpg"></a></li>
+  <li class="span3"><a href="img/old/oldhomeid/ershou8.jpg"><img alt=""  src="img/old/oldhomeid/ershou8.jpg"></a></li>
+
+ </ul>
+ </div>
+
+<div id="oldhomez">
+    <h3>房源周边<span>Home Around</span></h3>
+    <div class="row text-center" style="padding-bottom:60px;">
+       <div class="col-md-6">
+       <div id="oldaround" class="o1">
+         <ul>
+          <span>公交</span>
+          <li>15路</li>
+          <li>25路</li>
+          <li>35路</li>
+         </ul>
+       </div>
+       <div id="oldaround" class="o2">
+         <ul>
+          <span>学校</span>
+          <li>大同市第一中学</li>
+          <li>大同市第四十六小学</li>
+         </ul>
+       </div>
+       <div id="oldaround" class="o3">
+         <ul>
+          <span>医疗</span>
+          <li>大同市第四医院</li>
+          <li>南郊区卫生所</li>
+         </ul>
+       </div>
+
+       </div>
+        <div class="col-md-6">
+       <div id="oldaround" class="o4">
+         <ul>
+          <span>银行</span>
+          <li>农业银行</li>
+    
+
+         </ul>
+       </div>
+       <div id="oldaround" class="o5">
+         <ul>
+          <span>购物</span>
+          <li>沃尔玛</li>
+          <li>百盛商城</li>
+          <li>柳港园便民集贸市场</li>
+         </ul>
+       </div>
+       <div id="oldaround" class="o6">
+         <ul>
+          <span>餐饮</span>
+          <li>都市一家人</li>
+          <li>凯歌餐饮</li>
+          <li>各种小吃</li>
+         </ul>
+       </div>
+       
+       </div>
+    </div>
+  <hr>
+  
+   <div id="oldcontant" class="text-center">
+   <span class="glyphicon glyphicon-heart"></span>
+   <span class="glyphicon glyphicon-user"></span> 
+   <span class="glyphicon glyphicon-ok"></span>
+   <p><span>收藏此房</span><span>联系房东</span><span>我要买</span></p>
+   </div>
+   <hr>
+ <div id="oldx">
+    <h3>相似房源<span>Similar Home</span></h3>
+    <div class="row text-center">
+      <div class="col-md-3">
+       <div class="thumbnail">
+      <a href="oldconn.html"><img id="inoldimg" src="img/ershou1.jpg" alt="柳港园C区两室两厅72m²"></a>
+        <p>柳港园C区两室两厅72m²</p>
+       </div>
+      </div>
+      <div class="col-md-3">
+      <div class="thumbnail">
+      <a href="oldconn.html"><img id="inoldimg" src="img/ershou2.jpg" alt="柳港园C区两室两厅72m²"></a>
+        <p>柳港园C区两室两厅72m²</p>
+       </div>
+      </div>
+      <div class="col-md-3">
+       <div class="thumbnail">
+      <a href="oldconn.html"><img id="inoldimg" src="img/ershou3.jpg" alt="柳港园C区两室两厅72m²"></a>
+        <p>柳港园C区两室两厅72m²</p>
+       </div>
+      </div>
+      <div class="col-md-3">
+       <div class="thumbnail">
+      <a href="oldconn.html"><img id="inoldimg" src="img/ershou4.jpg" alt="柳港园C区两室两厅72m²"></a>
+        <p>柳港园C区两室两厅72m²</p>
+       </div>
+       </div>
+      </div>
+    </div>
+ </div>
+ 
+ 
+ 
+</div>
+</div>
+<footer>
+			<div style=" color:#999" class="container">
+				<div class="row">
+                       <!-- <div class="col-xs-12 col-sm-6">
+                                <div class="row">
+                                <ul class="footer-nav">
+                               <a href="#"> <li>关于我们</li></a>
+                               <a href="#"><li>联系我们</li></a>
+                               <a href="#"><li>加入我们</li></a>
+                               <a href="#"> <li>信誉房产</li></a>
+                               <a href="#"><li>常见问题</li></a>
+                               <a href="#"> <li>合作伙伴</li></a>
+                                
+                                </ul>
+                                </div>-->
+                                <div class="cop text-center">
+                             <p>Copyright © 2015 0352fang.com All Rights Reserved | 晋ICP备 13046642号</p>
+                         </div>
+                         </div>
+					
+						<!--<div class="col-xs-12 col-sm-6">
+							<h3 class="pull-right">Contact Us</h3>
+
+						</div>-->
+
+					</div>
+				</div>
+</footer>
+
+    
+  </body>
+</html>

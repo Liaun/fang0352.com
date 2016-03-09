@@ -1,0 +1,384 @@
+@charset "utf-8";
+/* CSS Document */
+*{margin:0px; padding:0px; font-family:微软雅黑;}
+
+
+
+
+#header input{ width:300px;}
+#denglu{ margin-top:100px;}`
+#denglu .pull-right{margin-right:20px;}
+#denglu .input-group{margin-top:10px;}
+#denglu a{padding-right:15px;}
+#denglu .btn-success{width:91%; margin-bottom:20px;}
+
+#zhuce{ margin-top:100px;}`
+#zhuce .pull-right{margin-right:20px;}
+#zhuce .input-group{margin-top:10px;}
+#zhuce a{padding-right:15px;}
+#zhuce .btn-success{width:91%; margin-bottom:20px;}
+
+#log{	width:350px;}
+
+#banner{ width:100%;
+	margin-top:30px;
+margin-bottom:10px;
+background-image:url(img/banner.jpg);
+background-size:100% 100%;
+}
+
+.breadcrumbs{margin-bottom:10px; margin-left:10px; padding:10px 0;}
+
+#banner img{ padding:20px 20px 30px 20px}
+#banner a{ background-color:#6ba944; color:#fff; }
+
+#main{text-align:center:}
+#xinfang{background-image:url(img/banner1.jpg); margin-top:50px;}
+#ershou{margin-top:40px;}
+#guwen{margin-bottom:30px;}
+#guwen img{width:150px; height:150px;}
+
+footer{
+	background-color:#333;
+	padding-bottom:10px;
+	}
+	
+.footer-nav li{list-style:none;
+float:left;
+margin-left:20px;
+margin-top:30px;}
+.footer-nav a{
+	text-decoration:none;
+      
+	color:#999;}
+.footer-nav a:hover{color:#FFF;}
+
+.cop p{
+	padding-top:15px;
+	}	
+
+.jjia{
+	margin-bottom:30px;
+}
+
+.on{padding:2px; background-color:#CCC; }
+#newc a{ color:#000; margin-left:15px;
+text-decoration:none; padding:2px;
+}
+
+#newc a:hover{ padding:2px; background-color:#CCC;}
+#newc a:active{ padding:2px; background-color:#CCC;}
+
+#newc span{padding-left:10px;}
+
+#newlist a{ color:#333; }
+#newlist h2:hover{color:#999;}
+#newlist img{width:250px; height:150px;}
+#oldlist a{ color:#333;}
+#oldlist .thumbnail:hover{ color:#333; border-left-width:10px;}
+#oldlist img{width:250px; height:150px;}
+#oldlist h3{ padding-top:10px;}
+#oldlist h3 span{font-size:36px;color:#900;}
+
+
+#rentlist a{ color:#333;}
+#rentlist .thumbnail:hover{ color:#333; border-left-width:10px;}
+#rentlist img{width:250px; height:150px;}
+#rentlist h3{ padding-top:10px;}
+#rentlist h3 span{font-size:36px;color:#900;}
+#rentlist .row{border-bottom:1px dashed #999999}
+
+#mkpd{background-image:url(img/lundujiebd.jpg);
+background-size:100% 100%;
+height:500px;
+
+}
+
+#mkp{background-image:url(img/z1.jpg);
+background-size:100% 100%;
+ -moz-box-shadow: 3px 3px 4px #000;
+    -webkit-box-shadow: 3px 3px 4px #000;
+    box-shadow: 3px 3px 4px #000;
+	height:420px;
+	margin-top:10px;}
+
+.mianban{background-color:#fff;
+ -moz-box-shadow:2px 2px 3px #000;
+    -webkit-box-shadow:2px 2px 3px #000;
+    box-shadow:2px 2px 3px #000;
+	margin-top:50px;
+	margin-bottom:30px;}
+#tuijie img{width:250px; height:150px;}
+	
+#zhuce{
+
+}
+
+#oldl span{ margin-right:10px;}
+#newc span{ padding:10px 10px 5px 10px;}
+
+.fs_gallery {
+	background: rgba(0, 0, 0, 0.9); left: 0px; top: 0px; right: 0px; bottom: 0px; position: fixed; z-index: 1000;
+}
+.fs_gallery_close {
+	top: 20px; width: 25px; height: 25px; text-align: center; right: 20px; color: rgb(204, 204, 204); line-height: 23px; font-size: 34px; position: absolute; z-index: 1002; cursor: pointer;
+}
+.fs_gallery_close::before {
+	content: "x";
+}
+.fs_gallery_close:hover {
+	color: rgb(255, 255, 255);
+}
+.fs_gallery_prev {
+	width: 80px; color: rgb(204, 204, 204); font-size: 30px; position: absolute; z-index: 1001; cursor: pointer;
+}
+.fs_gallery_next {
+	width: 80px; color: rgb(204, 204, 204); font-size: 30px; position: absolute; z-index: 1001; cursor: pointer;
+}
+.fs_gallery_prev:hover {
+	background: rgba(0, 0, 0, 0.1); color: rgb(255, 255, 255);
+}
+.fs_gallery_next:hover {
+	background: rgba(0, 0, 0, 0.1); color: rgb(255, 255, 255);
+}
+.fs_gallery_prev {
+	left: 0px; top: 0px; bottom: 0px;
+}
+.fs_gallery_next {
+	top: 0px; right: 0px; bottom: 0px;
+}
+.fs_gallery_prev::before {
+	left: 35px; top: 50%; height: 30px; margin-top: -30px; position: absolute; content: "<";
+}
+.fs_gallery_next::before {
+	left: 35px; top: 50%; height: 30px; margin-top: -30px; position: absolute; content: ">";
+}
+.fs_gallery_shuft {
+	width: 9999999px; position: relative;
+}
+.fs_gallery_shuft::after {
+	clear: both; display: block; content: "";
+}
+.fs_gallery_shuft_item {
+	background-position: center; float: left; position: relative; background-repeat: no-repeat;
+}
+.fs_gallery_shuft_item img {
+	left: 50%; top: 50%; position: absolute; box-shadow: 0px 0px 8px rgba(0,0,0,0.8);
+}
+
+
+#gallery li{float:left; margin:10px 0 10px 10px;  list-style-type:none; }
+#gallery li img{height:200px; width:267px;}
+
+#oldbanner{margin-top:50px;}
+#oldbanner h3{ position:absolute; top:100px; right:20%;}
+#oldbanner h3 span{background-color:#333; color:#FFF; padding:10px; margin:10px 0 10px 10px;}
+#oldbanner img{width:100%; height:350px; padding-top:10px;}
+#oldhomeid{background-color:#eeebeb; height:auto; border-bottom:1px solid #CCC;}
+#oldhomeid img{padding-top:10px;}
+#oldhomeid adress{padding:0px; margin:0px;}
+#oldhomeid p span{margin-right:10px;}
+
+#uid {padding-right:20px;}
+#oldhomes {margin-top:20px;}
+#oldhomes h3{padding:10px 10px 0 10px; }
+#oldhomes h3 span{padding:10px; font-size:14px; color:#C33}
+#oldhomes p{color:#666; margin:40px; border-left:3px solid #999; padding-left:10px;}
+#oldhomes {margin-top:20px;}
+#oldhomei h3{padding:10px 10px 0 10px; }
+#oldhomei h3 span{padding:10px; font-size:14px; color:#C33}
+#oldhometable{padding:25px 30px 20px 30px; font-size:16px;}
+#oldhometable .tableheader{font-weight:bold;}
+#oldtablep{color:#900; font-size:15px; padding:0px; margin:0px;}
+#oldhomeimg h3{padding:10px 10px 20px 10px; }
+#oldhomeimg h3 span{padding:10px; font-size:14px; color:#C33}
+#oldhomez{ margin-top:480px;}
+#oldhomez h3{padding:10px 10px 0px 10px; }
+#oldhomez h3 span{padding:10px; font-size:14px; color:#C33}
+#oldaround{margin:10px; padding:20px;}
+#oldaround ul{vertical-align:middle;}
+#oldaround li{float:left;  margin-left:20px; padding:10px; list-style-type:none; color:#333; }
+#oldaround span{float:left;  margin-left:20px; padding:6px; list-style-type:none; border:2px solid #333; border-radius:6px; font-size:18px;}
+ /*.o1 li{background-color:#933}
+.o2 li{background-color:#06F}
+.o3 li{background-color:#F00}
+.o4 li{background-color:#960}
+.o5 li{background-color:#F09}
+.o6 li{background-color:#393} */
+
+
+#oldcontant .glyphicon{font-size:36px; margin:30px 30px 0 30px; border:1px solid #666; border-radius:10px; padding:30px;}
+#oldcontant .glyphicon:hover{font-size:36px; margin:30px 30px 0 30px; border:1px solid #666; border-radius:10px; padding:30px; color:#fff; background-color:#666;}
+#oldcontant span{margin:0px 60px 20px 52px;}
+
+
+#oldx{margin:50px;}
+#oldx h3{padding:10px 10px 0px 10px; }
+#oldx h3 span{padding:10px; font-size:14px; color:#C33}
+#oldx p{padding:5px 5px 0 5px; font-size:16px; color:#666; margin-top:10px;}
+#oldx img{ width:250px; height:150px;}
+#rentcc img{padding-left:20px;}
+#rentcc h3{padding:10px 10px 20px 10px; }
+#rentcc h3 span{padding:10px; font-size:14px; color:#C33;}
+#rentcclist{ height:120px;}
+#rentcclist ul li{ float:left; padding:0 5px; margin:5px 15px; list-style-type:none; text-align:center; width:60px; height:50px;}
+
+
+/*# <span id="bed">床</span>
+     <span id="sofa">沙发</span>
+     <span id="tv">电视</span>
+     <span id="teapoy">茶几</span>
+     <span id="table">餐桌</span>
+     <span id="heating">暖气</span>
+     <span id="bookcase">书柜</span>
+     <span id="bedstand">床头柜</span>
+     <span id="bath">洗浴</span>
+     <span id="air-conditioning">空调</span>
+     <span id="Lampblack">油烟机</span>
+     <span id="wardrobe">衣柜</span*/
+
+#bed{ background-image:url(../img/icon/bed.png);  background-size:100% 100%;}
+#nobed{ background-image:url(../img/icon/nobed.png);  background-size:100% 100%;}
+#sofa{ background-image:url(../img/icon/sofa.png);  background-size:100% 100%; }
+#nosofa{ background-image:url(../img/icon/no/sofa.png);  background-size:100% 100%;}
+#tv{ background-image:url(../img/icon/tv.png);  background-size:100% 100%; }
+#notv{ background-image:url(../img/icon/no/tv.png);  background-size:100% 100%; }
+#teapoy{ background-image:url(../img/icon/teapoy.png);  background-size:100% 100%; }
+#noteapoy{ background-image:url(../img/icon/no/teapoy.png);  background-size:100% 100%; }
+#heating{ background-image:url(../img/icon/heating.png);  background-size:100% 100%;}
+#noheating{ background-image:url(../img/icon/no/heating.png);  background-size:100% 100%; }
+#bookcase{ background-image:url(../img/icon/bookcase.png);  background-size:100% 100%; }
+#nobookcase{ background-image:url(../img/icon/no/bookcase.png);  background-size:100% 100%;}
+#bedstand{ background-image:url(../img/icon/bedstand.png);  background-size:100% 100%;}
+#nobedstand{ background-image:url(../img/icon/no/bedstand.png);  background-size:100% 100%; }
+#bath{ background-image:url(../img/icon/bath.png);  background-size:100% 100%; }
+#nobath{ background-image:url(../img/icon/no/bath.png);  background-size:100% 100%; }
+#air-conditioning{ background-image:url(../img/icon/air-conditioning.png);  background-size:100% 100%; }
+#noair-conditioning{ background-image:url(../img/icon/no/air-conditioning.png);  background-size:100% 100%; }
+#Lampblack{ background-image:url(../img/icon/Lampblack.png);  background-size:100% 100%; }
+#noLampblack{ background-image:url(../img/icon/no/Lampblack.png);  background-size:100% 100%; }
+#wardrobe{ background-image:url(../img/icon/wardrobe.png);  background-size:100% 100%; }
+#nowardrobe{ background-image:url(../img/icon/no/wardrobe.png);  background-size:100% 100%; }
+#table{ background-image:url(../img/icon/table.png);  background-size:100% 100%; }
+#notable{ background-image:url(../img/icon/no/table.png);  background-size:100% 100%; }
+
+#rentcheck {margin-top:80px; color:#666;}
+
+
+
+#rentcheck select{width:200px; border:2px solid #333; border-radius:5px; margin:15px 0; } 
+#rentcheck span{ padding:18px;font-size:16px;}
+#rentcheck2{ padding:10px 0 35px 0;}
+#rentcheck2 input{width:18px;
+	height:18px;
+	background:#ccc;
+    border-radius:10px;
+	border:1px solid #36F;}
+
+#rentheader p{padding:10px 0 0 0}
+#rentheader{background:#CCC;}
+#rentheader span{color:#C00;}
+#rentlist{margin-top:20px;}
+#rentlist .row{padding:25px 10px;}
+#rentcclist span{ margin:30px 20px 10px 20px; font-weight:bold; font-size:16px;}
+
+
+
+#adviserid img {width:150px; height:150px;} 
+#adviserid{ height:180px;}
+#adviserid a{color:#333;}
+#adviserid a:hover{color:#999; text-decoration:none;}
+#imgload{margin:20px 0;}
+#inoldimg{width:400px; height:200px;}
+
+.dropdown_st{
+	float:left;
+	width:30%;
+	margin:0 1%;
+	}
+.dropdown_bt{
+	width:100%;
+	height:46px;
+	border: 1px solid #CCC;
+	font-size: 18px;
+
+	border-radius: 0px;}
+	
+#inp{font-size:25px;
+ color:#FFF;
+ padding:5px;
+ background-color:#333;
+ position:absolute;
+ top:150px;
+ right:20px;
+}
+
+#indexa{ display:inline-block; font-size:14px; padding:25px 10px 5px 10px;}
+
+#adviserid {padding:10px; border:1px dashed #333333; border-radius:20px; margin:20px 5px;}
+#adviserid h3 span{ font-size:10px; padding:3px; background-color:#0C9; color:#FFF;}
+.adviserid{border:1px dashed #999; margin:70px 0 70px 0;}
+.adviserid img {width:150px; height:150px;} 
+.advise{ 
+	width:100px; 
+	height:40px; 
+	margin-left:20px;
+	font-size: 14px;
+	padding: 3px;
+	background-color: #0C9;
+	color: #FFF;}
+#star{color:#F90;}
+#nostar{color:#CCC;}
+
+.evaluat—tit{
+	width:180px;
+	height:40px;
+	background-color:#333;
+	color:#FFF;
+	text-align:center;
+	line-height:40px;
+	margin:0;}
+.evaluat—list{margin-top:20px; height:140px; font-size:16px;}
+#sel-box{ margin:20px 40px;}
+.sel-radio{margin:0 60px; font-size:16px;}
+
+#adviser_banner{ background-image:url(img/adviser_banner.jpg); background-size:100% 100%; height:400px; margin-top:50px;}
+
+#indexicon:hover{ width:160px; height:150px;
+    }
+	
+#innp{ padding:5px;
+ background-color:#666; 
+font-size:24px; color:#FFF;  position:absolute;
+ top:180px;
+ right:25px;
+  -webkit-box-shadow:2px 2px 2px;  
+  -moz-box-shadow: 2px 2px 2px;  
+  box-shadow: 2px 2px 2px; }
+  
+#ttp{ padding:3px;
+ background-color:#666; 
+font-size:18px; color:#FFF;  position:absolute;
+ top:100px;
+ right:25px;
+  -webkit-box-shadow:2px 2px 2px;  
+  -moz-box-shadow: 2px 2px 2px;  
+  box-shadow: 2px 2px 2px; }
+  
+#oldp{ padding:3px;
+ background-color:#666; 
+font-size:18px; color:#FFF;  position:absolute;
+ top:100px;
+ right:25px;
+  -webkit-box-shadow:2px 2px 2px;  
+  -moz-box-shadow: 2px 2px 2px;  
+  box-shadow: 2px 2px 2px; }
+#innp span{font-size:18px; padding-right:5px;}
+
+#addhomeradio span{ display:inline-block;font-size:20px; padding:5px 30px 0 0;}
+#addhomeradio .inputm{font-size:18px; padding:0 5px;}
+#sidehome{width:20px; height:20px; margin-left:20px; margin-right:5px;}
+
+
+#fromzhuce input{width:310px;}
+

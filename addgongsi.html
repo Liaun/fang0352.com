@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <title>大同房产网-添加房产证中介公司</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/liaun.css" rel="stylesheet">
+    <link href="css/fileinput.css" media="all" rel="stylesheet" type="text/css" />
+      <link href="css/bootstrapValidator.css" rel="stylesheet">
+
+<script src="http://lib.sinaapp.com/js/jquery/1.9.1/jquery-1.9.1.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/fileinput.js"></script>
+<script src="js/fileinput_locale_zh.js"></script> 
+<script src="js//bootstrapValidator.js"></script>
+
+<script>
+$(document).ready(function() {
+    $('#gongsiFrom').bootstrapValidator({
+        message: 'This value is not valid',
+        feedbackIcons: {
+            valid: 'glyphicon glyphicon-ok',
+            invalid: 'glyphicon glyphicon-remove',
+            validating: 'glyphicon glyphicon-refresh'
+        },
+        fields: {
+            gongsiname: {
+                message: '公司名称输入有误',
+                validators: {
+                    notEmpty: {
+                        message: '公司名称不能为空'
+                    },
+
+                }
+            },
+           
+            telephone: {
+                validators: {
+                    notEmpty: {
+                        message: '手机号不能为空'
+                    },
+                     stringLength: {
+                        max:11,
+                        message: '手机号不能超过11位'
+                    },
+
+                }
+            },
+			 gongsiadress: {
+                validators: {
+                    notEmpty: {
+                        message: '公司地址不能为空'
+                    },
+
+                }
+            },
+			 area: {
+                validators: {
+                    notEmpty: {
+                        message: '职位不能为空'
+                    },
+
+                }
+            },
+			
+			 name: {
+                validators: {
+                    notEmpty: {
+                        message: '法人姓名不能为空'
+                    },
+
+                }
+            },
+			
+			touxiangimg: {
+                validators: {
+                    notEmpty: {
+                        message: '必须上传头像'
+                    },
+
+                }
+            },
+			
+			phone: {
+                validators: {
+                    notEmpty: {
+                        message: '公司电话不能为空'
+                    },
+
+                }
+            },
+			
+			gongsiid: {
+                validators: {
+                    notEmpty: {
+                        message: '房地产经纪机构编号不能为空'
+                    },
+
+                }
+            },
+			
+			jieshao: {
+                validators: {
+                    notEmpty: {
+                        message: '房地产经纪机构编号不能为空'
+                    },
+
+                }
+            },
+			
+			beianimg: {
+                validators: {
+                    notEmpty: {
+                        message: '备案证书必须上传'
+                    },
+
+                }
+            },
+			
+			
+			mendianimg: {
+                validators: {
+                    notEmpty: {
+                        message: '门店照片必须上传'
+                    },
+
+                }
+            },
+			zhizhaoimg: {
+                validators: {
+                    notEmpty: {
+                        message: '营业执照必须上传'
+                    },
+
+                }
+            },
+           
+
+
+
+
+        }
+    });
+});
+
+</script>
+
+
+
+ </head>
+ <style>
+
+#adviserFrom label{ font-size:18px;}
+ </style>
+
+<body>
+	<div class="main container">
+
+		<div class="row " style="width: 60%; margin-left: 20%;">
+			<!--房源基本信息-->
+			<div class="page-header">
+				<h3>添加房产中介公司</h3>
+			</div>
+	   
+        <form id="gongsiFrom">
+         <div class="form-group">
+             <label>公司名称</label>
+             <input type="text" class="form-control" name="gongsiname" />
+         </div>
+         <div class="form-group">
+             <label>公司地址</label>
+             <input type="text" class="form-control" name="gongsiadress" />
+         </div>
+         <div class="form-group">
+             <label>法人姓名</label>
+             <input type="text" class="form-control" name="name" />
+         </div>
+         <div class="form-group">
+             <label>法人手机号</label>
+             <input type="number" class="form-control" name="telephone" />
+         </div>
+         <div class="form-group">
+             <label>公司电话</label>
+             <input type="number" class="form-control" name="phone" />
+         </div>
+         <div class="form-group">
+             <label>房地产经纪机构编号</label>
+             <input type="text" class="form-control" name="gongsiid" />
+         </div>
+         <div class="form-group">
+             <label>公司简介</label>
+             <textarea name="jieshao" class="form-control" > </textarea>
+         </div>
+         <div class="form-group">
+             <label>上传备案证书</label>
+		     <input id="file-4" type="file" name="beianimg" class="file" data-preview-file-type="text" data-upload-url="#" multiple  multiple data-max-file-count="1" >
+		 </div>
+         <div class="form-group">
+             <label>上传营业执照</label>
+		     <input id="file-4" type="file" name="zhizhaoimg" class="file" data-preview-file-type="text" data-upload-url="#" multiple  multiple data-max-file-count="1" >
+		 </div>
+         <div class="form-group">
+             <label>上传门店照</label>
+		     <input id="file-4" type="file" name="mendianimg" class="file" data-preview-file-type="text" data-upload-url="#" multiple multiple data-min-file-count="1" >
+		 </div>
+         <div class="form-group">
+            <button type="submit" class="form-control btn btn-success" name="submit"> 立即提交 </button>
+         </div>
+		</form>
+		</div>
+	</div>
+</body>
+</html>
